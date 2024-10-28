@@ -65,7 +65,7 @@ const ModelFetcher = memo<ModelFetcherProps>(({ provider }) => {
         <div style={{display: 'flex', lineHeight: '24px'}}>
           {t('llm.modelList.total', { count: totalModels })}
           {remoteModels && remoteModels.length > 0 && (
-            <ActionIcon icon={CircleX} size={'small'} title={t('llm.fetcher.clear')}/>
+            <ActionIcon icon={CircleX} onClick={() => clearObtainedModels(provider)} size={'small'} title={t('llm.fetcher.clear')}/>
           )}
         </div>
         <Tooltip
