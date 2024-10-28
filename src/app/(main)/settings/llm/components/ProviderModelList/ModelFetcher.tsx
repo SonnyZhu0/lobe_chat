@@ -1,4 +1,4 @@
-import { Icon, Tooltip } from '@lobehub/ui';
+import {ActionIcon, Icon, Tooltip} from '@lobehub/ui';
 import { Typography } from 'antd';
 import { createStyles } from 'antd-style';
 import dayjs from 'dayjs';
@@ -16,10 +16,6 @@ import {
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
 const useStyles = createStyles(({ css, token }) => ({
-  buttons: css`
-    display: flex;
-  `,
-
   hover: css`
     cursor: pointer;
 
@@ -66,46 +62,37 @@ const ModelFetcher = memo<ModelFetcherProps>(({ provider }) => {
   return (
     <Typography.Text style={{ fontSize: 12 }} type={'secondary'}>
       <Flexbox align={'center'} gap={0} horizontal justify={'space-between'}>
-        <div>{t('llm.modelList.total', { count: totalModels })}</div>
-        <div className={styles.buttons}>
-          <Tooltip
-            overlayStyle={{ pointerEvents: 'none' }}
-            title={
-              latestFetchTime
-                ? t('llm.fetcher.latestTime', {
-                    time: dayjs(latestFetchTime).format('YYYY-MM-DD HH:mm:ss'),
-                  })
-                : t('llm.fetcher.noLatestTime')
-            }
-          >
-            <Flexbox
-              align={'center'}
-              className={styles.hover}
-              gap={4}
-              horizontal
-              onClick={() => mutate()}
-            >
-              <Icon
-                icon={isValidating ? LucideLoaderCircle : LucideRefreshCcwDot}
-                size={'small'}
-                spin={isValidating}
-              />
-              <div>{isValidating ? t('llm.fetcher.fetching') : t('llm.fetcher.fetch')}</div>
-            </Flexbox>
-          </Tooltip>
+        <div style={{display: 'flex', lineHeight: '24px'}}>
+          {t('llm.modelList.total', { count: totalModels })}
           {remoteModels && remoteModels.length > 0 && (
-            <Flexbox
-              align={'center'}
-              className={styles.hover}
-              gap={4}
-              horizontal
-              onClick={() => clearObtainedModels(provider)}
-            >
-              <Icon icon={CircleX} size={'small'} />
-              <div>{t('llm.fetcher.clear')}</div>
-            </Flexbox>
+            <ActionIcon icon={CircleX} size={'small'} title={t('llm.fetcher.clear')}/>
           )}
         </div>
+        <Tooltip
+          overlayStyle={{ pointerEvents: 'none' }}
+          title={
+            latestFetchTime
+              ? t('llm.fetcher.latestTime', {
+                time: dayjs(latestFetchTime).format('YYYY-MM-DD HH:mm:ss'),
+              })
+              : t('llm.fetcher.noLatestTime')
+          }
+        >
+          <Flexbox
+            align={'center'}
+            className={styles.hover}
+            gap={4}
+            horizontal
+            onClick={() => mutate()}
+          >
+            <Icon
+              icon={isValidating ? LucideLoaderCircle : LucideRefreshCcwDot}
+              size={'small'}
+              spin={isValidating}
+            />
+            <div>{isValidating ? t('llm.fetcher.fetching') : t('llm.fetcher.fetch')}</div>
+          </Flexbox>
+        </Tooltip>
       </Flexbox>
     </Typography.Text>
   );
