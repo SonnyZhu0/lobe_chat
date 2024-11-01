@@ -173,9 +173,6 @@
   "SenseChat-Turbo": {
     "description": "Adecuado para preguntas rápidas y escenarios de ajuste fino del modelo."
   },
-  "SenseChat-Vision": {
-    "description": "Modelo de última versión (V5.5), longitud de contexto de 16K, admite entradas de múltiples imágenes, optimizando las capacidades básicas del modelo, logrando mejoras significativas en el reconocimiento de propiedades de objetos, relaciones espaciales, identificación de eventos de acción, comprensión de escenas, reconocimiento de emociones, razonamiento lógico y generación de comprensión de texto."
-  },
   "THUDM/glm-4-9b-chat": {
     "description": "GLM-4 9B es una versión de código abierto, que proporciona una experiencia de conversación optimizada para aplicaciones de diálogo."
   },
@@ -425,6 +422,9 @@
   "gemini-1.5-flash-002": {
     "description": "Gemini 1.5 Flash 002 es un modelo multimodal eficiente, que admite una amplia gama de aplicaciones."
   },
+  "gemini-1.5-flash-8b": {
+    "description": "Gemini 1.5 Flash 8B es un modelo multimodal eficiente que admite una amplia gama de aplicaciones."
+  },
   "gemini-1.5-flash-8b-exp-0924": {
     "description": "Gemini 1.5 Flash 8B 0924 es el último modelo experimental, con mejoras significativas en el rendimiento tanto en casos de uso de texto como multimodal."
   },
@@ -617,8 +617,10 @@
   "internlm/internlm2_5-7b-chat": {
     "description": "InternLM2.5 ofrece soluciones de diálogo inteligente en múltiples escenarios."
   },
-  "jamba-1.5-large": {},
-  "jamba-1.5-mini": {},
+  "jamba-1.5-large": {
+  },
+  "jamba-1.5-mini": {
+  },
   "lite": {
     "description": "Spark Lite es un modelo de lenguaje grande y ligero, con una latencia extremadamente baja y una capacidad de procesamiento eficiente, completamente gratuito y de código abierto, que admite funciones de búsqueda en línea en tiempo real. Su característica de respuesta rápida lo hace destacar en aplicaciones de inferencia y ajuste de modelos en dispositivos de baja potencia, brindando a los usuarios una excelente relación costo-beneficio y experiencia inteligente, especialmente en escenarios de preguntas y respuestas, generación de contenido y búsqueda."
   },
@@ -1042,8 +1044,8 @@
   "step-1-flash": {
     "description": "Modelo de alta velocidad, adecuado para diálogos en tiempo real."
   },
-  "step-1.5v-turbo": {
-    "description": "Este modelo cuenta con potentes capacidades de comprensión de video."
+  "step-1.5v-mini": {
+    "description": "Este modelo tiene una potente capacidad de comprensión de video."
   },
   "step-1v-32k": {
     "description": "Soporta entradas visuales, mejorando la experiencia de interacción multimodal."

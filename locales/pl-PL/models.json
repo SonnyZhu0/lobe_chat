@@ -173,9 +173,6 @@
   "SenseChat-Turbo": {
     "description": "Idealny do szybkich odpowiedzi i scenariuszy dostosowywania modelu."
   },
-  "SenseChat-Vision": {
-    "description": "Najnowsza wersja modelu (V5.5), długość kontekstu 16K, obsługuje wiele obrazów jako wejście, w pełni realizuje optymalizację podstawowych zdolności modelu, osiągając znaczne postępy w rozpoznawaniu atrybutów obiektów, relacjach przestrzennych, rozpoznawaniu zdarzeń, rozumieniu scen, rozpoznawaniu emocji, rozumowaniu logicznym oraz generowaniu i rozumieniu tekstu."
-  },
   "THUDM/glm-4-9b-chat": {
     "description": "GLM-4 9B to otwarta wersja, oferująca zoptymalizowane doświadczenie dialogowe dla aplikacji konwersacyjnych."
   },
@@ -425,6 +422,9 @@
   "gemini-1.5-flash-002": {
     "description": "Gemini 1.5 Flash 002 to wydajny model multimodalny, który wspiera szeroką gamę zastosowań."
   },
+  "gemini-1.5-flash-8b": {
+    "description": "Gemini 1.5 Flash 8B to wydajny model multimodalny, który wspiera szeroki zakres zastosowań."
+  },
   "gemini-1.5-flash-8b-exp-0924": {
     "description": "Gemini 1.5 Flash 8B 0924 to najnowszy eksperymentalny model, który wykazuje znaczące poprawy wydajności w zastosowaniach tekstowych i multimodalnych."
   },
@@ -617,8 +617,10 @@
   "internlm/internlm2_5-7b-chat": {
     "description": "InternLM2.5 oferuje inteligentne rozwiązania dialogowe w różnych scenariuszach."
   },
-  "jamba-1.5-large": {},
-  "jamba-1.5-mini": {},
+  "jamba-1.5-large": {
+  },
+  "jamba-1.5-mini": {
+  },
   "lite": {
     "description": "Spark Lite to lekki model językowy o dużej skali, charakteryzujący się niezwykle niskim opóźnieniem i wysoką wydajnością przetwarzania, całkowicie darmowy i otwarty, wspierający funkcje wyszukiwania w czasie rzeczywistym. Jego cechy szybkiej reakcji sprawiają, że doskonale sprawdza się w zastosowaniach inferencyjnych na urządzeniach o niskiej mocy obliczeniowej oraz w dostosowywaniu modeli, oferując użytkownikom znakomity stosunek kosztów do korzyści oraz inteligentne doświadczenie, szczególnie w kontekście pytań i odpowiedzi, generowania treści oraz wyszukiwania."
   },
@@ -1042,8 +1044,8 @@
   "step-1-flash": {
     "description": "Model o wysokiej prędkości, odpowiedni do dialogów w czasie rzeczywistym."
   },
-  "step-1.5v-turbo": {
-    "description": "Ten model ma potężne możliwości zrozumienia wideo."
+  "step-1.5v-mini": {
+    "description": "Ten model ma potężne zdolności rozumienia wideo."
   },
   "step-1v-32k": {
     "description": "Obsługuje wejścia wizualne, wzmacniając doświadczenie interakcji multimodalnych."

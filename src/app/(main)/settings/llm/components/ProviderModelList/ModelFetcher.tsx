@@ -14,6 +14,7 @@ import {
   settingsSelectors,
 } from '@/store/user/selectors';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
+import isEqual from "fast-deep-equal";
 
 const useStyles = createStyles(({ css, token }) => ({
   hover: css`
@@ -53,9 +54,7 @@ const ModelFetcher = memo<ModelFetcherProps>(({ provider }) => {
     (s) => modelProviderSelectors.getModelCardsById(provider)(s).length,
   );
 
-  const remoteModels = useUserStore((s) =>
-    modelProviderSelectors.remoteProviderModelCards(provider)(s),
-  );
+  const remoteModels = useUserStore(modelProviderSelectors.remoteProviderModelCards(provider), isEqual);
 
   const { mutate, isValidating } = useFetchProviderModelList(provider, enabledAutoFetch);
 

@@ -173,9 +173,6 @@
   "SenseChat-Turbo": {
     "description": "Hızlı soru-cevap ve model ince ayar senaryoları için uygundur."
   },
-  "SenseChat-Vision": {
-    "description": "En son sürüm model (V5.5), 16K bağlam uzunluğu, çoklu görüntü girişini destekler, modelin temel yetenek optimizasyonunu tam olarak gerçekleştirir ve nesne özellik tanıma, mekansal ilişkiler, eylem olayı tanıma, sahne anlama, duygu tanıma, mantıksal bilgi akıl yürütme ve metin anlama üretiminde önemli iyileştirmeler sağlamıştır."
-  },
   "THUDM/glm-4-9b-chat": {
     "description": "GLM-4 9B açık kaynak versiyonu, diyalog uygulamaları için optimize edilmiş bir diyalog deneyimi sunar."
   },
@@ -425,6 +422,9 @@
   "gemini-1.5-flash-002": {
     "description": "Gemini 1.5 Flash 002, geniş uygulama yelpazesini destekleyen verimli bir çok modlu modeldir."
   },
+  "gemini-1.5-flash-8b": {
+    "description": "Gemini 1.5 Flash 8B, geniş uygulama yelpazesini destekleyen verimli bir çok modlu modeldir."
+  },
   "gemini-1.5-flash-8b-exp-0924": {
     "description": "Gemini 1.5 Flash 8B 0924, metin ve çok modlu kullanım durumlarında önemli performans artışları sunan en son deneysel modeldir."
   },
@@ -617,8 +617,10 @@
   "internlm/internlm2_5-7b-chat": {
     "description": "InternLM2.5, çoklu senaryolarda akıllı diyalog çözümleri sunar."
   },
-  "jamba-1.5-large": {},
-  "jamba-1.5-mini": {},
+  "jamba-1.5-large": {
+  },
+  "jamba-1.5-mini": {
+  },
   "lite": {
     "description": "Spark Lite, son derece düşük gecikme süresi ve yüksek verimlilikle çalışan hafif bir büyük dil modelidir. Tamamen ücretsiz ve açık olup, gerçek zamanlı çevrimiçi arama işlevini desteklemektedir. Hızlı yanıt verme özelliği, düşük hesaplama gücüne sahip cihazlarda çıkarım uygulamaları ve model ince ayarlarında mükemmel performans sergileyerek, kullanıcılara maliyet etkinliği ve akıllı deneyim sunmakta, özellikle bilgi sorgulama, içerik oluşturma ve arama senaryolarında başarılı olmaktadır."
   },
@@ -1042,7 +1044,7 @@
   "step-1-flash": {
     "description": "Yüksek hızlı model, gerçek zamanlı diyaloglar için uygundur."
   },
-  "step-1.5v-turbo": {
+  "step-1.5v-mini": {
     "description": "Bu model, güçlü bir video anlama yeteneğine sahiptir."
   },
   "step-1v-32k": {

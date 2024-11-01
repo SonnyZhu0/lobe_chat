@@ -173,9 +173,6 @@
   "SenseChat-Turbo": {
     "description": "Geschikt voor snelle vraag-en-antwoord en modelafstemming."
   },
-  "SenseChat-Vision": {
-    "description": "De nieuwste versie van het model (V5.5), met een contextlengte van 16K, ondersteunt meerdere afbeeldingsinvoeren en heeft de basiscapaciteiten van het model geoptimaliseerd, met aanzienlijke verbeteringen in objecteigenschappenherkenning, ruimtelijke relaties, actie-evenementherkenning, scènebegrip, emotieherkenning, logische redenering en tekstbegrip en -generatie."
-  },
   "THUDM/glm-4-9b-chat": {
     "description": "GLM-4 9B is de open-source versie die een geoptimaliseerde gesprekservaring biedt voor gespreksapplicaties."
   },
@@ -425,6 +422,9 @@
   "gemini-1.5-flash-002": {
     "description": "Gemini 1.5 Flash 002 is een efficiënt multimodaal model dat ondersteuning biedt voor een breed scala aan toepassingen."
   },
+  "gemini-1.5-flash-8b": {
+    "description": "Gemini 1.5 Flash 8B is een efficiënte multimodale model dat een breed scala aan toepassingen ondersteunt."
+  },
   "gemini-1.5-flash-8b-exp-0924": {
     "description": "Gemini 1.5 Flash 8B 0924 is het nieuwste experimentele model, met aanzienlijke prestatieverbeteringen in tekst- en multimodale toepassingen."
   },
@@ -617,8 +617,10 @@
   "internlm/internlm2_5-7b-chat": {
     "description": "InternLM2.5 biedt intelligente gespreksoplossingen voor meerdere scenario's."
   },
-  "jamba-1.5-large": {},
-  "jamba-1.5-mini": {},
+  "jamba-1.5-large": {
+  },
+  "jamba-1.5-mini": {
+  },
   "lite": {
     "description": "Spark Lite is een lichtgewicht groot taalmodel met extreem lage latentie en efficiënte verwerkingscapaciteit. Het is volledig gratis en open, en ondersteunt realtime online zoekfunctionaliteit. De snelle respons maakt het uitermate geschikt voor inferentie op apparaten met lage rekenkracht en modelafstemming, wat gebruikers uitstekende kosteneffectiviteit en een slimme ervaring biedt, vooral in kennisvragen, contentgeneratie en zoekscenario's."
   },
@@ -1042,8 +1044,8 @@
   "step-1-flash": {
     "description": "Hogesnelheidsmodel, geschikt voor realtime gesprekken."
   },
-  "step-1.5v-turbo": {
-    "description": "Dit model heeft krachtige mogelijkheden voor video begrip."
+  "step-1.5v-mini": {
+    "description": "Dit model heeft krachtige video begrip capaciteiten."
   },
   "step-1v-32k": {
     "description": "Ondersteunt visuele invoer, verbetert de multimodale interactie-ervaring."
