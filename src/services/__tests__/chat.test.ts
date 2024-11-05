@@ -2,7 +2,7 @@ import { LobeChatPluginManifest } from '@lobehub/chat-plugin-sdk';
 import { act } from '@testing-library/react';
 import { merge } from 'lodash-es';
 import OpenAI from 'openai';
-import { describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import {
@@ -26,7 +26,6 @@ import {
   ModelProvider,
 } from '@/libs/agent-runtime';
 import { AgentRuntime } from '@/libs/agent-runtime';
-import { useFileStore } from '@/store/file';
 import { useToolStore } from '@/store/tool';
 import { UserStore } from '@/store/user';
 import { UserSettingsState, initialSettingsState } from '@/store/user/slices/settings/initialState';
@@ -36,6 +35,8 @@ import { ChatStreamPayload, type OpenAIChatMessage } from '@/types/openai/chat';
 import { LobeTool } from '@/types/tool';
 
 import { chatService, initializeWithClientStore } from '../chat';
+import { useUserStore } from '@/store/user';
+import {modelConfigSelectors} from "@/store/user/selectors";
 
 // Mocking external dependencies
 vi.mock('i18next', () => ({
@@ -51,6 +52,15 @@ vi.mock('@/utils/fetch', async (importOriginal) => {
   const module = await importOriginal();
 
   return { ...(module as any), getMessageError: vi.fn() };
+});
+
+beforeEach(() => {
+  // 清除所有模块的缓存
+  vi.resetModules();
+  // 默认设置 isServerMode 为 false
+  vi.mock('@/const/version', () => ({
+    isServerMode: false,
+  }));
 });
 
 // mock auth
@@ -156,7 +166,10 @@ describe('ChatService', () => {
             messages: [
               {
                 content: [
-                  { text: 'Hello', type: 'text' },
+                  {
+                    text: 'Hello',
+                    type: 'text',
+                  },
                   {
                     image_url: { detail: 'auto', url: 'http://example.com/image.jpg' },
                     type: 'image_url',
@@ -510,6 +523,48 @@ describe('ChatService', () => {
       });
     });
 
+    it('should throw InvalidAccessCode error when enableFetchOnClient is true and auth is enabled but user is not signed in', async () => {
+      // Mock userStore
+      const mockUserStore = {
+        enableAuth: () => true,
+        isSignedIn: false,
+      };
+
+      // Mock modelConfigSelectors
+      const mockModelConfigSelectors = {
+        isProviderFetchOnClient: () => () => true,
+      };
+
+      vi.spyOn(useUserStore, 'getState').mockImplementationOnce(() => mockUserStore as any);
+      vi.spyOn(modelConfigSelectors, 'isProviderFetchOnClient').mockImplementationOnce(mockModelConfigSelectors.isProviderFetchOnClient);
+
+      const params: Partial<ChatStreamPayload> = {
+        model: 'test-model',
+        messages: [],
+      };
+      const options = {};
+      const expectedPayload = {
+        model: DEFAULT_AGENT_CONFIG.model,
+        stream: true,
+        ...DEFAULT_AGENT_CONFIG.params,
+        ...params,
+      };
+
+      const result = await chatService.getChatCompletion(params,options);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        expect.any(String),
+        {
+          body: JSON.stringify(expectedPayload),
+          headers: expect.objectContaining({
+            'Content-Type': 'application/json',
+          }),
+          method: 'POST',
+        },
+      );
+      expect(result.status).toBe(401);
+    });
+
     // Add more test cases to cover different scenarios and edge cases
   });
 
@@ -731,6 +786,163 @@ describe('ChatService', () => {
           role: 'assistant',
         },
       ]);
+    });
+
+    describe('handle with files content in server mode', () => {
+      it('should includes files', async () => {
+        // 重新模拟模块，设置 isServerMode 为 true
+        vi.doMock('@/const/version', () => ({
+          isServerMode: true,
+        }));
+
+        // 需要在修改模拟后重新导入相关模块
+        const { chatService } = await import('../chat');
+
+        const messages = [
+          {
+            content: 'Hello',
+            role: 'user',
+            imageList: [
+              {
+                id: 'imagecx1',
+                url: 'http://example.com/xxx0asd-dsd.png',
+                alt: 'ttt.png',
+              },
+            ],
+            fileList: [
+              {
+                fileType: 'plain/txt',
+                size: 100000,
+                id: 'file1',
+                url: 'http://abc.com/abc.txt',
+                name: 'abc.png',
+              },
+              {
+                id: 'file_oKMve9qySLMI',
+                name: '2402.16667v1.pdf',
+                type: 'application/pdf',
+                size: 11256078,
+                url: 'https://xxx.com/ppp/480497/5826c2b8-fde0-4de1-a54b-a224d5e3d898.pdf',
+              },
+            ],
+          }, // Message with files
+          { content: 'Hi', role: 'tool', plugin: { identifier: 'plugin1', apiName: 'api1' } }, // Message with tool role
+          { content: 'Hey', role: 'assistant' }, // Regular user message
+        ] as ChatMessage[];
+
+        const output = chatService['processMessages']({
+          messages,
+          model: 'gpt-4o',
+        });
+
+        expect(output).toEqual([
+          {
+            content: [
+              {
+                text: `Hello
+
+<files_info>
+<images>
+<images_docstring>here are user upload images you can refer to</images_docstring>
+<image name="ttt.png" url="http://example.com/xxx0asd-dsd.png"></image>
+</images>
+<files>
+<files_docstring>here are user upload files you can refer to</files_docstring>
+<file id="file1" name="abc.png" type="plain/txt" size="100000" url="http://abc.com/abc.txt"></file>
+<file id="file_oKMve9qySLMI" name="2402.16667v1.pdf" type="undefined" size="11256078" url="https://xxx.com/ppp/480497/5826c2b8-fde0-4de1-a54b-a224d5e3d898.pdf"></file>
+</files>
+</files_info>`,
+                type: 'text',
+              },
+              {
+                image_url: { detail: 'auto', url: 'http://example.com/xxx0asd-dsd.png' },
+                type: 'image_url',
+              },
+            ],
+            role: 'user',
+          },
+          {
+            content: 'Hi',
+            name: 'plugin1____api1',
+            role: 'tool',
+          },
+          {
+            content: 'Hey',
+            role: 'assistant',
+          },
+        ]);
+      });
+    });
+
+    it('should include image files in server mode', async () => {
+      // 重新模拟模块，设置 isServerMode 为 true
+      vi.doMock('@/const/version', () => ({
+        isServerMode: true,
+      }));
+
+      // 需要在修改模拟后重新导入相关模块
+      const { chatService } = await import('../chat');
+      const messages = [
+        {
+          content: 'Hello',
+          role: 'user',
+          imageList: [
+            {
+              id: 'file1',
+              url: 'http://example.com/image.jpg',
+              alt: 'abc.png',
+            },
+          ],
+        }, // Message with files
+        { content: 'Hi', role: 'tool', plugin: { identifier: 'plugin1', apiName: 'api1' } }, // Message with tool role
+        { content: 'Hey', role: 'assistant' }, // Regular user message
+      ] as ChatMessage[];
+
+      const getChatCompletionSpy = vi.spyOn(chatService, 'getChatCompletion');
+      await chatService.createAssistantMessage({
+        messages,
+        plugins: [],
+        model: 'gpt-4-vision-preview',
+      });
+
+      expect(getChatCompletionSpy).toHaveBeenCalledWith(
+        {
+          messages: [
+            {
+              content: [
+                {
+                  text: `Hello
+
+<files_info>
+<images>
+<images_docstring>here are user upload images you can refer to</images_docstring>
+<image name="abc.png" url="http://example.com/image.jpg"></image>
+</images>
+
+</files_info>`,
+                  type: 'text',
+                },
+                {
+                  image_url: { detail: 'auto', url: 'http://example.com/image.jpg' },
+                  type: 'image_url',
+                },
+              ],
+              role: 'user',
+            },
+            {
+              content: 'Hi',
+              name: 'plugin1____api1',
+              role: 'tool',
+            },
+            {
+              content: 'Hey',
+              role: 'assistant',
+            },
+          ],
+          model: 'gpt-4-vision-preview',
+        },
+        undefined,
+      );
     });
   });
 });

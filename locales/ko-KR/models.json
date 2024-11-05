@@ -131,6 +131,9 @@
   "Qwen/Qwen2.5-32B-Instruct": {
     "description": "Qwen2.5는 지시형 작업 처리를 최적화하기 위해 설계된 새로운 대형 언어 모델 시리즈입니다."
   },
+  "Qwen/Qwen2.5-72B-Instruct": {
+    "description": "알리바바 클라우드 통의 천문 팀이 개발한 대형 언어 모델"
+  },
   "Qwen/Qwen2.5-72B-Instruct-128K": {
     "description": "Qwen2.5는 더 강력한 이해 및 생성 능력을 갖춘 새로운 대형 언어 모델 시리즈입니다."
   },
@@ -423,7 +426,7 @@
     "description": "Gemini 1.5 Flash 002는 효율적인 다중 모달 모델로, 광범위한 응용 프로그램의 확장을 지원합니다."
   },
   "gemini-1.5-flash-8b": {
-    "description": "Gemini 1.5 Flash 8B는 다양한 응용 프로그램을 지원하는 효율적인 다중 모드 모델입니다."
+    "description": "Gemini 1.5 Flash 8B는 효율적인 다중 모달 모델로, 광범위한 응용 프로그램의 확장을 지원합니다."
   },
   "gemini-1.5-flash-8b-exp-0924": {
     "description": "Gemini 1.5 Flash 8B 0924는 최신 실험 모델로, 텍스트 및 다중 모달 사용 사례에서 상당한 성능 향상을 보여줍니다."

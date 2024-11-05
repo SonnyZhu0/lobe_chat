@@ -131,6 +131,9 @@
   "Qwen/Qwen2.5-32B-Instruct": {
     "description": "Qwen2.5 é uma nova série de modelos de linguagem em larga escala, projetada para otimizar o processamento de tarefas instrucionais."
   },
+  "Qwen/Qwen2.5-72B-Instruct": {
+    "description": "Modelo de linguagem de grande escala desenvolvido pela equipe Qianwen da Alibaba Cloud."
+  },
   "Qwen/Qwen2.5-72B-Instruct-128K": {
     "description": "Qwen2.5 é uma nova série de grandes modelos de linguagem, com capacidades de compreensão e geração aprimoradas."
   },
@@ -423,7 +426,7 @@
     "description": "O Gemini 1.5 Flash 002 é um modelo multimodal eficiente, que suporta uma ampla gama de aplicações."
   },
   "gemini-1.5-flash-8b": {
-    "description": "Gemini 1.5 Flash 8B é um modelo multimodal eficiente, com suporte para uma ampla gama de aplicações."
+    "description": "O Gemini 1.5 Flash 8B é um modelo multimodal eficiente, com suporte para uma ampla gama de aplicações."
   },
   "gemini-1.5-flash-8b-exp-0924": {
     "description": "O Gemini 1.5 Flash 8B 0924 é o mais recente modelo experimental, com melhorias significativas de desempenho em casos de uso de texto e multimídia."
