@@ -1,6 +1,5 @@
 {
-  "ai21": {
-  },
+  "ai21": {},
   "ai360": {
     "description": "360 AI to platforma modeli i usług AI wprowadzona przez firmę 360, oferująca różnorodne zaawansowane modele przetwarzania języka naturalnego, w tym 360GPT2 Pro, 360GPT Pro, 360GPT Turbo i 360GPT Turbo Responsibility 8K. Modele te łączą dużą liczbę parametrów z multimodalnymi zdolnościami, szeroko stosowanymi w generowaniu tekstu, rozumieniu semantycznym, systemach dialogowych i generowaniu kodu. Dzięki elastycznej strategii cenowej, 360 AI zaspokaja zróżnicowane potrzeby użytkowników, wspierając integrację przez deweloperów, co przyczynia się do innowacji i rozwoju aplikacji inteligentnych."
   },
@@ -16,6 +15,7 @@
   "bedrock": {
     "description": "Bedrock to usługa oferowana przez Amazon AWS, skoncentrowana na dostarczaniu zaawansowanych modeli językowych i wizualnych dla przedsiębiorstw. Jej rodzina modeli obejmuje serię Claude od Anthropic, serię Llama 3.1 od Meta i inne, oferując różnorodne opcje od lekkich do wysokowydajnych, wspierając generowanie tekstu, dialogi, przetwarzanie obrazów i inne zadania, odpowiednie dla różnych skal i potrzeb aplikacji biznesowych."
   },
+  "cloudflare": {},
   "deepseek": {
     "description": "DeepSeek to firma skoncentrowana na badaniach i zastosowaniach technologii sztucznej inteligencji, której najnowszy model DeepSeek-V2.5 łączy zdolności do prowadzenia ogólnych rozmów i przetwarzania kodu, osiągając znaczące postępy w zakresie dostosowywania do preferencji ludzkich, zadań pisarskich i przestrzegania instrukcji."
   },
@@ -64,8 +64,7 @@
   "qwen": {
     "description": "Tongyi Qianwen to samodzielnie opracowany przez Alibaba Cloud model językowy o dużej skali, charakteryzujący się silnymi zdolnościami rozumienia i generowania języka naturalnego. Może odpowiadać na różnorodne pytania, tworzyć treści pisemne, wyrażać opinie, pisać kod i działać w wielu dziedzinach."
   },
-  "sensenova": {
-  },
+  "sensenova": {},
   "siliconcloud": {
     "description": "SiliconFlow dąży do przyspieszenia AGI, aby przynieść korzyści ludzkości, poprawiając wydajność dużych modeli AI dzięki łatwemu w użyciu i niskokosztowemu stosowi GenAI."
   },
@@ -86,6 +85,9 @@
   },
   "wenxin": {
     "description": "Platforma do rozwoju i usług aplikacji AI oraz dużych modeli w skali przedsiębiorstwa, oferująca najbardziej kompleksowy i łatwy w użyciu zestaw narzędzi do rozwoju modeli sztucznej inteligencji generatywnej oraz całego procesu tworzenia aplikacji."
+  },
+  "xai": {
+    "description": "xAI to firma, która koncentruje się na budowaniu sztucznej inteligencji w celu przyspieszenia ludzkich odkryć naukowych. Naszą misją jest wspieranie wspólnego zrozumienia wszechświata."
   },
   "zeroone": {
     "description": "01.AI koncentruje się na technologiach sztucznej inteligencji w erze AI 2.0, intensywnie promując innowacje i zastosowania „człowiek + sztuczna inteligencja”, wykorzystując potężne modele i zaawansowane technologie AI w celu zwiększenia wydajności ludzkiej produkcji i realizacji technologicznego wsparcia."
