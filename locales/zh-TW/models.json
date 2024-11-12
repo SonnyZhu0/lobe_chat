@@ -20,6 +20,20 @@
   "4.0Ultra": {
     "description": "Spark4.0 Ultra 是星火大模型系列中最為強大的版本，在升級聯網搜索鏈路同時，提升對文本內容的理解和總結能力。它是用於提升辦公生產力和準確響應需求的全方位解決方案，是引領行業的智能產品。"
   },
+  "@cf/meta/llama-3-8b-instruct-awq": {},
+  "@cf/openchat/openchat-3.5-0106": {},
+  "@cf/qwen/qwen1.5-14b-chat-awq": {},
+  "@hf/google/gemma-7b-it": {},
+  "@hf/meta-llama/meta-llama-3-8b-instruct": {
+    "description": "世代相傳，Meta Llama 3 在各種行業基準上展現了尖端的性能，並提供新的能力，包括改進的推理能力。"
+  },
+  "@hf/mistral/mistral-7b-instruct-v0.2": {},
+  "@hf/nexusflow/starling-lm-7b-beta": {},
+  "@hf/nousresearch/hermes-2-pro-mistral-7b": {},
+  "@hf/thebloke/deepseek-coder-6.7b-instruct-awq": {},
+  "@hf/thebloke/neural-chat-7b-v3-1-awq": {},
+  "@hf/thebloke/openhermes-2.5-mistral-7b-awq": {},
+  "@hf/thebloke/zephyr-7b-beta-awq": {},
   "Baichuan2-Turbo": {
     "description": "採用搜索增強技術實現大模型與領域知識、全網知識的全面連結。支持PDF、Word等多種文檔上傳及網址輸入，信息獲取及時、全面，輸出結果準確、專業。"
   },
@@ -587,6 +601,9 @@
   "gpt-4o-mini": {
     "description": "GPT-4o mini是OpenAI在GPT-4 Omni之後推出的最新模型，支持圖文輸入並輸出文本。作為他們最先進的小型模型，它比其他近期的前沿模型便宜很多，並且比GPT-3.5 Turbo便宜超過60%。它保持了最先進的智能，同時具有顯著的性價比。GPT-4o mini在MMLU測試中獲得了82%的得分，目前在聊天偏好上排名高於GPT-4。"
   },
+  "grok-beta": {
+    "description": "擁有與 Grok 2 相當的性能，但具備更高的效率、速度和功能。"
+  },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13B 是一款合併了多個頂尖模型的創意與智能相結合的語言模型。"
   },
@@ -1068,6 +1085,9 @@
   },
   "upstage/SOLAR-10.7B-Instruct-v1.0": {
     "description": "Upstage SOLAR Instruct v1 (11B) 適用於精細化指令任務，提供出色的語言處理能力。"
+  },
+  "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
+    "description": "Claude 3.5 Sonnet 提升了行業標準，性能超越競爭對手模型及 Claude 3 Opus，在廣泛的評估中表現出色，同時具備我們中等層級模型的速度和成本。"
   },
   "wizardlm2": {
     "description": "WizardLM 2 是微軟 AI 提供的語言模型，在複雜對話、多語言、推理和智能助手領域表現尤為出色。"

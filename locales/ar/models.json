@@ -20,6 +20,20 @@
   "4.0Ultra": {
     "description": "Spark4.0 Ultra هو أقوى إصدار في سلسلة نماذج Spark، حيث يعزز فهم النصوص وقدرات التلخيص مع تحسين روابط البحث عبر الإنترنت. إنه حل شامل يهدف إلى تعزيز إنتاجية المكتب والاستجابة الدقيقة للاحتياجات، ويعتبر منتجًا ذكيًا رائدًا في الصناعة."
   },
+  "@cf/meta/llama-3-8b-instruct-awq": {},
+  "@cf/openchat/openchat-3.5-0106": {},
+  "@cf/qwen/qwen1.5-14b-chat-awq": {},
+  "@hf/google/gemma-7b-it": {},
+  "@hf/meta-llama/meta-llama-3-8b-instruct": {
+    "description": "من جيل إلى جيل، يظهر Meta Llama 3 أداءً رائدًا في مجموعة واسعة من معايير الصناعة ويقدم ميزات جديدة، بما في ذلك تحسينات في التفكير."
+  },
+  "@hf/mistral/mistral-7b-instruct-v0.2": {},
+  "@hf/nexusflow/starling-lm-7b-beta": {},
+  "@hf/nousresearch/hermes-2-pro-mistral-7b": {},
+  "@hf/thebloke/deepseek-coder-6.7b-instruct-awq": {},
+  "@hf/thebloke/neural-chat-7b-v3-1-awq": {},
+  "@hf/thebloke/openhermes-2.5-mistral-7b-awq": {},
+  "@hf/thebloke/zephyr-7b-beta-awq": {},
   "Baichuan2-Turbo": {
     "description": "يستخدم تقنية تعزيز البحث لتحقيق الربط الشامل بين النموذج الكبير والمعرفة الميدانية والمعرفة من جميع أنحاء الشبكة. يدعم تحميل مستندات PDF وWord وغيرها من المدخلات، مما يضمن الحصول على المعلومات بشكل سريع وشامل، ويقدم نتائج دقيقة واحترافية."
   },
@@ -587,6 +601,9 @@
   "gpt-4o-mini": {
     "description": "نموذج GPT-4o mini هو أحدث نموذج أطلقته OpenAI بعد GPT-4 Omni، ويدعم إدخال الصور والنصوص وإخراج النصوص. كأحد نماذجهم المتقدمة الصغيرة، فهو أرخص بكثير من النماذج الرائدة الأخرى في الآونة الأخيرة، وأرخص بأكثر من 60% من GPT-3.5 Turbo. يحتفظ بذكاء متقدم مع قيمة ممتازة. حصل GPT-4o mini على 82% في اختبار MMLU، وهو حاليًا يتفوق على GPT-4 في تفضيلات الدردشة."
   },
+  "grok-beta": {
+    "description": "يتمتع بأداء يعادل Grok 2، ولكنه يتميز بكفاءة أسرع وميزات أفضل."
+  },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13B هو نموذج لغوي يجمع بين الإبداع والذكاء من خلال دمج عدة نماذج رائدة."
   },
@@ -1068,6 +1085,9 @@
   },
   "upstage/SOLAR-10.7B-Instruct-v1.0": {
     "description": "Upstage SOLAR Instruct v1 (11B) مناسب لمهام التعليمات الدقيقة، يوفر قدرة معالجة لغوية ممتازة."
+  },
+  "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
+    "description": "تحسين أدوات Claude 3.5 Sonnet معايير الصناعة، حيث تفوق أداؤه على نماذج المنافسين وClaude 3 Opus، وحقق نتائج رائعة في تقييمات متعددة، مع سرعة وتكلفة تعادل النماذج المتوسطة لدينا."
   },
   "wizardlm2": {
     "description": "WizardLM 2 هو نموذج لغوي تقدمه Microsoft AI، يتميز بأداء ممتاز في الحوار المعقد، واللغات المتعددة، والاستدلال، والمساعدين الذكيين."

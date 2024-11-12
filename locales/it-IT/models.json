@@ -20,6 +20,20 @@
   "4.0Ultra": {
     "description": "Spark4.0 Ultra è la versione più potente della serie di modelli Spark, migliorando la comprensione e la sintesi del contenuto testuale mentre aggiorna il collegamento alla ricerca online. È una soluzione completa per migliorare la produttività lavorativa e rispondere con precisione alle esigenze, rappresentando un prodotto intelligente all'avanguardia nel settore."
   },
+  "@cf/meta/llama-3-8b-instruct-awq": {},
+  "@cf/openchat/openchat-3.5-0106": {},
+  "@cf/qwen/qwen1.5-14b-chat-awq": {},
+  "@hf/google/gemma-7b-it": {},
+  "@hf/meta-llama/meta-llama-3-8b-instruct": {
+    "description": "Generazione dopo generazione, Meta Llama 3 dimostra prestazioni all'avanguardia in un'ampia gamma di parametri di riferimento del settore e offre nuove capacità, inclusa una maggiore capacità di ragionamento."
+  },
+  "@hf/mistral/mistral-7b-instruct-v0.2": {},
+  "@hf/nexusflow/starling-lm-7b-beta": {},
+  "@hf/nousresearch/hermes-2-pro-mistral-7b": {},
+  "@hf/thebloke/deepseek-coder-6.7b-instruct-awq": {},
+  "@hf/thebloke/neural-chat-7b-v3-1-awq": {},
+  "@hf/thebloke/openhermes-2.5-mistral-7b-awq": {},
+  "@hf/thebloke/zephyr-7b-beta-awq": {},
   "Baichuan2-Turbo": {
     "description": "Utilizza tecnologie di ricerca avanzate per collegare completamente il grande modello con la conoscenza di settore e la conoscenza globale. Supporta il caricamento di vari documenti come PDF, Word e l'immissione di URL, con acquisizione di informazioni tempestiva e completa, e risultati di output accurati e professionali."
   },
@@ -587,6 +601,9 @@
   "gpt-4o-mini": {
     "description": "GPT-4o mini è il modello più recente lanciato da OpenAI dopo il GPT-4 Omni, supporta input visivi e testuali e produce output testuali. Come il loro modello di punta in formato ridotto, è molto più economico rispetto ad altri modelli all'avanguardia recenti e costa oltre il 60% in meno rispetto a GPT-3.5 Turbo. Mantiene un'intelligenza all'avanguardia, offrendo un rapporto qualità-prezzo significativo. GPT-4o mini ha ottenuto un punteggio dell'82% nel test MMLU e attualmente è classificato più in alto di GPT-4 per preferenze di chat."
   },
+  "grok-beta": {
+    "description": "Possiede prestazioni comparabili a Grok 2, ma offre una maggiore efficienza, velocità e funzionalità."
+  },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13B è un modello linguistico che combina creatività e intelligenza, unendo diversi modelli di punta."
   },
@@ -1068,6 +1085,9 @@
   },
   "upstage/SOLAR-10.7B-Instruct-v1.0": {
     "description": "Upstage SOLAR Instruct v1 (11B) è adatto per compiti di istruzione dettagliati, offrendo eccellenti capacità di elaborazione linguistica."
+  },
+  "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
+    "description": "Claude 3.5 Sonnet ha elevato gli standard del settore, superando i modelli concorrenti e Claude 3 Opus, dimostrando prestazioni eccezionali in un'ampia gamma di valutazioni, mantenendo al contempo la velocità e il costo del nostro modello di livello medio."
   },
   "wizardlm2": {
     "description": "WizardLM 2 è un modello di linguaggio fornito da Microsoft AI, particolarmente efficace in dialoghi complessi, multilingue, ragionamento e assistenti intelligenti."

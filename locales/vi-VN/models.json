@@ -20,6 +20,20 @@
   "4.0Ultra": {
     "description": "Spark4.0 Ultra là phiên bản mạnh mẽ nhất trong dòng mô hình lớn Xinghuo, nâng cao khả năng hiểu và tóm tắt nội dung văn bản trong khi nâng cấp liên kết tìm kiếm trực tuyến. Đây là giải pháp toàn diện nhằm nâng cao năng suất văn phòng và đáp ứng chính xác nhu cầu, là sản phẩm thông minh dẫn đầu ngành."
   },
+  "@cf/meta/llama-3-8b-instruct-awq": {},
+  "@cf/openchat/openchat-3.5-0106": {},
+  "@cf/qwen/qwen1.5-14b-chat-awq": {},
+  "@hf/google/gemma-7b-it": {},
+  "@hf/meta-llama/meta-llama-3-8b-instruct": {
+    "description": "Generation over generation, Meta Llama 3 thể hiện hiệu suất hàng đầu trên một loạt các tiêu chuẩn trong ngành và cung cấp các khả năng mới, bao gồm cả khả năng suy luận được cải thiện."
+  },
+  "@hf/mistral/mistral-7b-instruct-v0.2": {},
+  "@hf/nexusflow/starling-lm-7b-beta": {},
+  "@hf/nousresearch/hermes-2-pro-mistral-7b": {},
+  "@hf/thebloke/deepseek-coder-6.7b-instruct-awq": {},
+  "@hf/thebloke/neural-chat-7b-v3-1-awq": {},
+  "@hf/thebloke/openhermes-2.5-mistral-7b-awq": {},
+  "@hf/thebloke/zephyr-7b-beta-awq": {},
   "Baichuan2-Turbo": {
     "description": "Sử dụng công nghệ tăng cường tìm kiếm để kết nối toàn diện giữa mô hình lớn và kiến thức lĩnh vực, kiến thức toàn cầu. Hỗ trợ tải lên nhiều loại tài liệu như PDF, Word và nhập URL, thông tin được thu thập kịp thời và toàn diện, kết quả đầu ra chính xác và chuyên nghiệp."
   },
@@ -587,6 +601,9 @@
   "gpt-4o-mini": {
     "description": "GPT-4o mini là mô hình mới nhất do OpenAI phát hành sau GPT-4 Omni, hỗ trợ đầu vào hình ảnh và đầu ra văn bản. Là mô hình nhỏ gọn tiên tiến nhất của họ, nó rẻ hơn nhiều so với các mô hình tiên tiến gần đây khác và rẻ hơn hơn 60% so với GPT-3.5 Turbo. Nó giữ lại trí thông minh tiên tiến nhất trong khi có giá trị sử dụng đáng kể. GPT-4o mini đạt 82% điểm trong bài kiểm tra MMLU và hiện đứng cao hơn GPT-4 về sở thích trò chuyện."
   },
+  "grok-beta": {
+    "description": "Sở hữu hiệu suất tương đương Grok 2, nhưng với hiệu quả, tốc độ và tính năng cao hơn."
+  },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13B là mô hình ngôn ngữ kết hợp giữa sáng tạo và trí thông minh, kết hợp nhiều mô hình hàng đầu."
   },
@@ -1068,6 +1085,9 @@
   },
   "upstage/SOLAR-10.7B-Instruct-v1.0": {
     "description": "Upstage SOLAR Instruct v1 (11B) phù hợp cho các nhiệm vụ chỉ dẫn tinh vi, cung cấp khả năng xử lý ngôn ngữ xuất sắc."
+  },
+  "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
+    "description": "Claude 3.5 Sonnet đã nâng cao tiêu chuẩn trong ngành, với hiệu suất vượt trội so với các mô hình cạnh tranh và Claude 3 Opus, thể hiện xuất sắc trong nhiều đánh giá, đồng thời có tốc độ và chi phí giống như các mô hình tầm trung của chúng tôi."
   },
   "wizardlm2": {
     "description": "WizardLM 2 là mô hình ngôn ngữ do Microsoft AI cung cấp, đặc biệt xuất sắc trong các lĩnh vực đối thoại phức tạp, đa ngôn ngữ, suy luận và trợ lý thông minh."
