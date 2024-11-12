@@ -12,6 +12,7 @@ import {
   GroqProviderCard,
   HuggingFaceProviderCard,
   HunyuanProviderCard,
+  LMStudioProviderCard,
   MinimaxProviderCard,
   MistralProviderCard,
   MoonshotProviderCard,
@@ -92,6 +93,11 @@ export const DEFAULT_LLM_CONFIG: UserModelProviderConfig = {
   hunyuan: {
     enabled: false,
     enabledModels: filterEnabledModels(HunyuanProviderCard),
+  },
+  lmstudio: {
+    enabled: false,
+    enabledModels: filterEnabledModels(LMStudioProviderCard),
+    fetchOnClient: true,
   },
   minimax: {
     enabled: false,
