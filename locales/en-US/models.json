@@ -25,7 +25,7 @@
   "@cf/qwen/qwen1.5-14b-chat-awq": {},
   "@hf/google/gemma-7b-it": {},
   "@hf/meta-llama/meta-llama-3-8b-instruct": {
-    "description": "Generation after generation, Meta Llama 3 showcases state-of-the-art performance across a broad range of industry benchmarks, introducing new capabilities including enhanced reasoning."
+    "description": "Generation after generation, Meta Llama 3 demonstrates state-of-the-art performance on a broad array of industry benchmarks and introduces new capabilities, including enhanced reasoning."
   },
   "@hf/mistral/mistral-7b-instruct-v0.2": {},
   "@hf/nexusflow/starling-lm-7b-beta": {},
@@ -602,7 +602,7 @@
     "description": "GPT-4o mini is the latest model released by OpenAI after GPT-4 Omni, supporting both image and text input while outputting text. As their most advanced small model, it is significantly cheaper than other recent cutting-edge models, costing over 60% less than GPT-3.5 Turbo. It maintains state-of-the-art intelligence while offering remarkable cost-effectiveness. GPT-4o mini scored 82% on the MMLU test and currently ranks higher than GPT-4 in chat preferences."
   },
   "grok-beta": {
-    "description": "Offers performance comparable to Grok 2 but with greater efficiency, speed, and functionality."
+    "description": "Comparable in performance to Grok 2 but with enhanced efficiency, speed, and capabilities."
   },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13B is a language model that combines creativity and intelligence by merging multiple top models."
@@ -1087,7 +1087,7 @@
     "description": "Upstage SOLAR Instruct v1 (11B) is suitable for refined instruction tasks, offering excellent language processing capabilities."
   },
   "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
-    "description": "Claude 3.5 Sonnet raises the industry standard, outperforming competitive models and Claude 3 Opus, excelling in extensive evaluations while maintaining the speed and cost of our mid-tier models."
+    "description": "Claude 3.5 Sonnet raises the industry standards, outperforming competing models and Claude 3 Opus, exhibiting excellent performance across a wide range of evaluations while maintaining the speed and cost of our mid-tier models."
   },
   "wizardlm2": {
     "description": "WizardLM 2 is a language model provided by Microsoft AI, excelling in complex dialogues, multilingual capabilities, reasoning, and intelligent assistant applications."

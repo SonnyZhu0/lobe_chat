@@ -25,7 +25,7 @@
   "@cf/qwen/qwen1.5-14b-chat-awq": {},
   "@hf/google/gemma-7b-it": {},
   "@hf/meta-llama/meta-llama-3-8b-instruct": {
-    "description": "Génération après génération, Meta Llama 3 démontre des performances à la pointe de la technologie sur une large gamme de références industrielles et offre de nouvelles capacités, y compris un raisonnement amélioré."
+    "description": "De génération en génération, Meta Llama 3 démontre des performances de pointe sur un large éventail de critères de l'industrie et offre de nouvelles capacités, y compris un raisonnement amélioré."
   },
   "@hf/mistral/mistral-7b-instruct-v0.2": {},
   "@hf/nexusflow/starling-lm-7b-beta": {},
@@ -602,7 +602,7 @@
     "description": "GPT-4o mini est le dernier modèle lancé par OpenAI après le GPT-4 Omni, prenant en charge les entrées multimodales et produisant des sorties textuelles. En tant que leur modèle compact le plus avancé, il est beaucoup moins cher que d'autres modèles de pointe récents et coûte plus de 60 % de moins que le GPT-3.5 Turbo. Il maintient une intelligence de pointe tout en offrant un rapport qualité-prix significatif. Le GPT-4o mini a obtenu un score de 82 % au test MMLU et se classe actuellement au-dessus du GPT-4 en termes de préférences de chat."
   },
   "grok-beta": {
-    "description": "Offrant des performances équivalentes à Grok 2, mais avec une efficacité, une rapidité et des fonctionnalités supérieures."
+    "description": "Offrant des performances équivalentes à celles de Grok 2, mais avec une efficacité, une rapidité et des fonctionnalités supérieures."
   },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13B est un modèle linguistique combinant créativité et intelligence, intégrant plusieurs modèles de pointe."
@@ -1087,7 +1087,7 @@
     "description": "Upstage SOLAR Instruct v1 (11B) est adapté aux tâches d'instructions détaillées, offrant d'excellentes capacités de traitement du langage."
   },
   "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
-    "description": "Claude 3.5 Sonnet élève les normes de l'industrie, surpassant les modèles concurrents et Claude 3 Opus, tout en affichant d'excellentes performances lors d'évaluations variées, avec la vitesse et le coût de nos modèles de niveau intermédiaire."
+    "description": "Claude 3.5 Sonnet a élevé les normes de l'industrie, surpassant les modèles concurrents et Claude 3 Opus, tout en offrant des performances exceptionnelles dans une vaste gamme d'évaluations, avec la rapidité et le coût de nos modèles de niveau intermédiaire."
   },
   "wizardlm2": {
     "description": "WizardLM 2 est un modèle de langage proposé par Microsoft AI, particulièrement performant dans les domaines des dialogues complexes, du multilinguisme, du raisonnement et des assistants intelligents."

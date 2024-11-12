@@ -25,7 +25,7 @@
   "@cf/qwen/qwen1.5-14b-chat-awq": {},
   "@hf/google/gemma-7b-it": {},
   "@hf/meta-llama/meta-llama-3-8b-instruct": {
-    "description": "Generation over generation, Meta Llama 3 在廣泛的行業基準上展現出尖端性能，並提供新能力，包括改進的推理。"
+    "description": "世代相傳，Meta Llama 3 在各種行業基準上展現了尖端的性能，並提供新的能力，包括改進的推理能力。"
   },
   "@hf/mistral/mistral-7b-instruct-v0.2": {},
   "@hf/nexusflow/starling-lm-7b-beta": {},
@@ -1087,7 +1087,7 @@
     "description": "Upstage SOLAR Instruct v1 (11B) 適用於精細化指令任務，提供出色的語言處理能力。"
   },
   "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
-    "description": "Claude 3.5 Sonnet 提升了行業標準，性能超越競爭對手模型及 Claude 3 Opus，在廣泛的評估中表現優異，同時具備我們中等層級模型的速度和成本。"
+    "description": "Claude 3.5 Sonnet 提升了行業標準，性能超越競爭對手模型及 Claude 3 Opus，在廣泛的評估中表現出色，同時具備我們中等層級模型的速度和成本。"
   },
   "wizardlm2": {
     "description": "WizardLM 2 是微軟 AI 提供的語言模型，在複雜對話、多語言、推理和智能助手領域表現尤為出色。"

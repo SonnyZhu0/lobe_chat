@@ -25,7 +25,7 @@
   "@cf/qwen/qwen1.5-14b-chat-awq": {},
   "@hf/google/gemma-7b-it": {},
   "@hf/meta-llama/meta-llama-3-8b-instruct": {
-    "description": "Generatie na generatie toont Meta Llama 3 state-of-the-art prestaties op een breed scala van industriële benchmarks en biedt nieuwe mogelijkheden, inclusief verbeterde redeneringsvaardigheden."
+    "description": "Generatie na generatie toont Meta Llama 3 prestaties van wereldklasse op een breed scala aan industriële benchmarks en biedt nieuwe mogelijkheden, waaronder verbeterd redeneren."
   },
   "@hf/mistral/mistral-7b-instruct-v0.2": {},
   "@hf/nexusflow/starling-lm-7b-beta": {},
@@ -602,7 +602,7 @@
     "description": "GPT-4o mini is het nieuwste model van OpenAI, gelanceerd na GPT-4 Omni, en ondersteunt zowel tekst- als beeldinvoer met tekstuitvoer. Als hun meest geavanceerde kleine model is het veel goedkoper dan andere recente toonaangevende modellen en meer dan 60% goedkoper dan GPT-3.5 Turbo. Het behoudt de meest geavanceerde intelligentie met een aanzienlijke prijs-kwaliteitverhouding. GPT-4o mini behaalde 82% op de MMLU-test en staat momenteel hoger in chatvoorkeuren dan GPT-4."
   },
   "grok-beta": {
-    "description": "Biedt prestaties die vergelijkbaar zijn met Grok 2, maar met hogere efficiëntie, snelheid en functionaliteit."
+    "description": "Beschikt over prestaties die vergelijkbaar zijn met Grok 2, maar met hogere efficiëntie, snelheid en functionaliteit."
   },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13B is een taalmodel dat creativiteit en intelligentie combineert door meerdere topmodellen te integreren."
@@ -1087,7 +1087,7 @@
     "description": "Upstage SOLAR Instruct v1 (11B) is geschikt voor verfijnde instructietaken en biedt uitstekende taalverwerkingscapaciteiten."
   },
   "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
-    "description": "Claude 3.5 Sonnet heeft de industriestandaard verhoogd, presteert beter dan concurrerende modellen en Claude 3 Opus, en excelleert in uitgebreide evaluaties, terwijl het de snelheid en kosten van onze modellen op gemiddelde niveau biedt."
+    "description": "Claude 3.5 Sonnet heeft de industriestandaard verhoogd, met prestaties die de concurrentie-modellen en Claude 3 Opus overtreffen, en blijkt uitstekend te presteren in uitgebreide evaluaties, terwijl het de snelheid en kosten van onze middenklasse modellen behoudt."
   },
   "wizardlm2": {
     "description": "WizardLM 2 is een taalmodel van Microsoft AI dat uitblinkt in complexe gesprekken, meertaligheid, inferentie en intelligente assistentie."

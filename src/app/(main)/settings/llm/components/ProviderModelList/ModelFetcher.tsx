@@ -1,7 +1,8 @@
-import {ActionIcon, Icon, Tooltip} from '@lobehub/ui';
+import { ActionIcon, Icon, Tooltip } from '@lobehub/ui';
 import { Typography } from 'antd';
 import { createStyles } from 'antd-style';
 import dayjs from 'dayjs';
+import isEqual from 'fast-deep-equal';
 import { CircleX, LucideLoaderCircle, LucideRefreshCcwDot } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -14,7 +15,6 @@ import {
   settingsSelectors,
 } from '@/store/user/selectors';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
-import isEqual from "fast-deep-equal";
 
 const useStyles = createStyles(({ css, token }) => ({
   hover: css`
@@ -54,17 +54,25 @@ const ModelFetcher = memo<ModelFetcherProps>(({ provider }) => {
     (s) => modelProviderSelectors.getModelCardsById(provider)(s).length,
   );
 
-  const remoteModels = useUserStore(modelProviderSelectors.remoteProviderModelCards(provider), isEqual);
+  const remoteModels = useUserStore(
+    modelProviderSelectors.remoteProviderModelCards(provider),
+    isEqual,
+  );
 
   const { mutate, isValidating } = useFetchProviderModelList(provider, enabledAutoFetch);
 
   return (
     <Typography.Text style={{ fontSize: 12 }} type={'secondary'}>
       <Flexbox align={'center'} gap={0} horizontal justify={'space-between'}>
-        <div style={{display: 'flex', lineHeight: '24px'}}>
+        <div style={{ display: 'flex', lineHeight: '24px' }}>
           {t('llm.modelList.total', { count: totalModels })}
           {remoteModels && remoteModels.length > 0 && (
-            <ActionIcon icon={CircleX} onClick={() => clearObtainedModels(provider)} size={'small'} title={t('llm.fetcher.clear')}/>
+            <ActionIcon
+              icon={CircleX}
+              onClick={() => clearObtainedModels(provider)}
+              size={'small'}
+              title={t('llm.fetcher.clear')}
+            />
           )}
         </div>
         <Tooltip
@@ -72,8 +80,8 @@ const ModelFetcher = memo<ModelFetcherProps>(({ provider }) => {
           title={
             latestFetchTime
               ? t('llm.fetcher.latestTime', {
-                time: dayjs(latestFetchTime).format('YYYY-MM-DD HH:mm:ss'),
-              })
+                  time: dayjs(latestFetchTime).format('YYYY-MM-DD HH:mm:ss'),
+                })
               : t('llm.fetcher.noLatestTime')
           }
         >

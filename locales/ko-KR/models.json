@@ -25,7 +25,7 @@
   "@cf/qwen/qwen1.5-14b-chat-awq": {},
   "@hf/google/gemma-7b-it": {},
   "@hf/meta-llama/meta-llama-3-8b-instruct": {
-    "description": "세대마다, Meta Llama 3는 다양한 산업 벤치마크에서 최첨단 성능을 보여주며, 향상된 추론을 포함한 새로운 기능을 제공합니다."
+    "description": "세대에서 세대로, Meta Llama 3는 다양한 산업 벤치마크에서 최첨단 성능을 보여주며, 향상된 추론을 포함한 새로운 기능을 제공합니다."
   },
   "@hf/mistral/mistral-7b-instruct-v0.2": {},
   "@hf/nexusflow/starling-lm-7b-beta": {},
@@ -602,7 +602,7 @@
     "description": "GPT-4o mini는 OpenAI가 GPT-4 Omni 이후에 출시한 최신 모델로, 텍스트와 이미지를 입력받아 텍스트를 출력합니다. 이 모델은 최신의 소형 모델로, 최근의 다른 최첨단 모델보다 훨씬 저렴하며, GPT-3.5 Turbo보다 60% 이상 저렴합니다. 최첨단의 지능을 유지하면서도 뛰어난 가성비를 자랑합니다. GPT-4o mini는 MMLU 테스트에서 82%의 점수를 기록했으며, 현재 채팅 선호도에서 GPT-4보다 높은 순위를 차지하고 있습니다."
   },
   "grok-beta": {
-    "description": "Grok 2와 비슷한 성능을 가지지만, 더 높은 효율성, 속도 및 기능을 제공합니다."
+    "description": "Grok 2와 유사한 성능을 보이지만, 더욱 높은 효율성, 속도 및 기능을 제공합니다."
   },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13B는 여러 최상위 모델을 통합한 창의성과 지능이 결합된 언어 모델입니다."
@@ -1087,7 +1087,7 @@
     "description": "Upstage SOLAR Instruct v1 (11B)는 세밀한 지시 작업에 적합하며, 뛰어난 언어 처리 능력을 제공합니다."
   },
   "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
-    "description": "Claude 3.5 Sonnet는 업계 표준을 강화하며, 경쟁 모델과 Claude 3 Opus를 초월하는 성능을 자랑합니다. 광범위한 평가에서 탁월한 결과를 보이며, 우리의 중간 모델 수준의 속도와 비용을 제공합니다."
+    "description": "Claude 3.5 Sonnet는 업계 표준을 향상시키며, 경쟁 모델과 Claude 3 Opus를 초과하는 성능을 발휘하고, 폭넓은 평가에서 뛰어난 성과를 보여줍니다. 또한, 중간 모델의 속도와 비용을 가지고 있습니다."
   },
   "wizardlm2": {
     "description": "WizardLM 2는 Microsoft AI에서 제공하는 언어 모델로, 복잡한 대화, 다국어, 추론 및 스마트 어시스턴트 분야에서 특히 뛰어난 성능을 발휘합니다."

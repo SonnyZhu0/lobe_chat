@@ -25,7 +25,7 @@
   "@cf/qwen/qwen1.5-14b-chat-awq": {},
   "@hf/google/gemma-7b-it": {},
   "@hf/meta-llama/meta-llama-3-8b-instruct": {
-    "description": "メタラマ3は世代を超え、幅広い業界ベンチマークで最先端の性能を示し、改善された推論を含む新しい機能を提供します。"
+    "description": "世代を重ねるごとに、Meta Llama 3 は幅広い業界ベンチマークで最先端の性能を示し、向上した推論を含む新しい機能を提供します。"
   },
   "@hf/mistral/mistral-7b-instruct-v0.2": {},
   "@hf/nexusflow/starling-lm-7b-beta": {},
@@ -602,7 +602,7 @@
     "description": "GPT-4o miniは、OpenAIがGPT-4 Omniの後に発表した最新のモデルで、画像とテキストの入力をサポートし、テキストを出力します。最先端の小型モデルとして、最近の他の先進モデルよりもはるかに安価で、GPT-3.5 Turboよりも60%以上安価です。最先端の知能を維持しつつ、コストパフォーマンスが大幅に向上しています。GPT-4o miniはMMLUテストで82%のスコアを獲得し、現在チャットの好みではGPT-4よりも高い評価を得ています。"
   },
   "grok-beta": {
-    "description": "Grok 2に匹敵する性能を持ちながら、より高い効率、速度、機能性を提供します。"
+    "description": "Grok 2 と同等の性能を持ちながら、より高い効率性、速度、機能を備えています。"
   },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13Bは複数のトップモデルを統合した創造性と知性を兼ね備えた言語モデルです。"
@@ -1087,7 +1087,7 @@
     "description": "Upstage SOLAR Instruct v1 (11B)は、精密な指示タスクに適しており、優れた言語処理能力を提供します。"
   },
   "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
-    "description": "Claude 3.5 Sonnetは業界標準を引き上げ、競合モデルやClaude 3 Opusを超える性能を示し、幅広い評価で優れた結果を出しながら、我々の中位モデルの速度とコストを兼ね備えています。"
+    "description": "Claude 3.5 Sonnet は業界基準を引き上げ、性能は競合モデルや Claude 3 Opus を上回り、幅広い評価で優れた結果を示し、同時に我々の中間モデルの速度とコストを兼ね備えています。"
   },
   "wizardlm2": {
     "description": "WizardLM 2は、Microsoft AIが提供する言語モデルであり、複雑な対話、多言語、推論、インテリジェントアシスタントの分野で特に優れた性能を発揮します。"

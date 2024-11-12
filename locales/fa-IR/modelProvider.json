@@ -59,7 +59,7 @@
     },
     "baseURLOrAccountID": {
       "desc": "شناسه حساب Cloudflare یا آدرس API سفارشی را وارد کنید",
-      "placeholder": "شناسه حساب Cloudflare / آدرس API سفارشی",
+      "placeholder": "شناسه حساب Cloudflare / URL API سفارشی",
       "title": "شناسه حساب Cloudflare / آدرس API"
     }
   },
