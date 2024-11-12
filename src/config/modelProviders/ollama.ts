@@ -25,6 +25,7 @@ const Ollama: ModelProviderCard = {
       id: 'llama3.1:405b',
       tokens: 128_000,
     },
+    // https://cohere.com/research/papers/aya-command-23-8b-and-35b-technical-report-2024-05-23
     {
       description:
         'Code Llama 是一款专注于代码生成和讨论的 LLM，结合广泛的编程语言支持，适用于开发者环境。',
