@@ -26,16 +26,15 @@ export const getProviderAuthPayload = (provider: string) => {
     }
 
     case ModelProvider.SenseNova: {
-      const { sensenovaAccessKeyID, sensenovaAccessKeySecret } = keyVaultsConfigSelectors.sensenovaConfig(
-        useUserStore.getState(),
-      );
+      const { sensenovaAccessKeyID, sensenovaAccessKeySecret } =
+        keyVaultsConfigSelectors.sensenovaConfig(useUserStore.getState());
 
-      const apiKey = (sensenovaAccessKeyID || '') + ':' + (sensenovaAccessKeySecret || '')
+      const apiKey = (sensenovaAccessKeyID || '') + ':' + (sensenovaAccessKeySecret || '');
 
-      return { 
+      return {
         apiKey,
-        sensenovaAccessKeyID: sensenovaAccessKeyID, 
-        sensenovaAccessKeySecret: sensenovaAccessKeySecret, 
+        sensenovaAccessKeyID: sensenovaAccessKeyID,
+        sensenovaAccessKeySecret: sensenovaAccessKeySecret,
       };
     }
 
@@ -67,6 +66,15 @@ export const getProviderAuthPayload = (provider: string) => {
       const config = keyVaultsConfigSelectors.ollamaConfig(useUserStore.getState());
 
       return { endpoint: config?.baseURL };
+    }
+
+    case ModelProvider.Cloudflare: {
+      const config = keyVaultsConfigSelectors.cloudflareConfig(useUserStore.getState());
+
+      return {
+        apiKey: config?.apiKey,
+        cloudflareBaseURLOrAccountID: config?.baseURLOrAccountID,
+      };
     }
 
     default: {
