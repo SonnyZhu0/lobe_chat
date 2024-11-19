@@ -25,7 +25,7 @@
   "@cf/qwen/qwen1.5-14b-chat-awq": {},
   "@hf/google/gemma-7b-it": {},
   "@hf/meta-llama/meta-llama-3-8b-instruct": {
-    "description": "Generation over generation, Meta Llama 3 thể hiện hiệu suất hàng đầu trên một loạt các tiêu chuẩn trong ngành và cung cấp các khả năng mới, bao gồm cả khả năng suy luận được cải thiện."
+    "description": "Generation over generation, Meta Llama 3 demonstrates state-of-the-art performance on a wide range of industry benchmarks and offers new capabilities, including improved reasoning."
   },
   "@hf/mistral/mistral-7b-instruct-v0.2": {},
   "@hf/nexusflow/starling-lm-7b-beta": {},
@@ -46,6 +46,12 @@
   "Baichuan4": {
     "description": "Mô hình có khả năng hàng đầu trong nước, vượt trội hơn các mô hình chính thống nước ngoài trong các nhiệm vụ tiếng Trung như bách khoa toàn thư, văn bản dài, sáng tạo nội dung. Cũng có khả năng đa phương tiện hàng đầu trong ngành, thể hiện xuất sắc trong nhiều tiêu chuẩn đánh giá uy tín."
   },
+  "Baichuan4-Air": {
+    "description": "Mô hình có khả năng hàng đầu trong nước, vượt trội hơn các mô hình chính thống nước ngoài trong các nhiệm vụ tiếng Trung như bách khoa toàn thư, văn bản dài và sáng tạo nội dung. Cũng có khả năng đa phương tiện hàng đầu trong ngành, thể hiện xuất sắc trong nhiều tiêu chuẩn đánh giá uy tín."
+  },
+  "Baichuan4-Turbo": {
+    "description": "Mô hình có khả năng hàng đầu trong nước, vượt trội hơn các mô hình chính thống nước ngoài trong các nhiệm vụ tiếng Trung như bách khoa toàn thư, văn bản dài và sáng tạo nội dung. Cũng có khả năng đa phương tiện hàng đầu trong ngành, thể hiện xuất sắc trong nhiều tiêu chuẩn đánh giá uy tín."
+  },
   "ERNIE-3.5-128K": {
     "description": "Mô hình ngôn ngữ quy mô lớn hàng đầu do Baidu tự phát triển, bao phủ một lượng lớn tài liệu tiếng Trung và tiếng Anh, có khả năng tổng quát mạnh mẽ, có thể đáp ứng hầu hết các yêu cầu về đối thoại, hỏi đáp, sáng tạo nội dung và các tình huống ứng dụng plugin; hỗ trợ tự động kết nối với plugin tìm kiếm của Baidu, đảm bảo thông tin hỏi đáp luôn được cập nhật kịp thời."
   },
@@ -60,6 +66,9 @@
   },
   "ERNIE-4.0-8K-Preview": {
     "description": "Mô hình ngôn ngữ quy mô siêu lớn hàng đầu do Baidu tự phát triển, so với ERNIE 3.5 đã nâng cấp toàn diện khả năng của mô hình, phù hợp rộng rãi với các nhiệm vụ phức tạp trong nhiều lĩnh vực; hỗ trợ tự động kết nối với plugin tìm kiếm Baidu, đảm bảo thông tin hỏi đáp luôn cập nhật."
+  },
+  "ERNIE-4.0-Turbo-128K": {
+    "description": "Mô hình ngôn ngữ lớn siêu cấp do Baidu tự phát triển, thể hiện hiệu suất xuất sắc, phù hợp rộng rãi với các tình huống nhiệm vụ phức tạp trong nhiều lĩnh vực; hỗ trợ tự động kết nối với plugin tìm kiếm Baidu, đảm bảo thông tin hỏi đáp kịp thời. So với ERNIE 4.0, hiệu suất tốt hơn."
   },
   "ERNIE-4.0-Turbo-8K-Latest": {
     "description": "Mô hình ngôn ngữ quy mô siêu lớn tự phát triển của Baidu, có hiệu suất tổng thể xuất sắc, phù hợp rộng rãi cho các tình huống tác vụ phức tạp trong nhiều lĩnh vực; hỗ trợ tự động kết nối với plugin tìm kiếm của Baidu, đảm bảo tính kịp thời của thông tin câu hỏi đáp. So với ERNIE 4.0, nó có hiệu suất tốt hơn."
@@ -160,7 +169,7 @@
   "Qwen/Qwen2.5-7B-Instruct-Turbo": {
     "description": "Qwen2.5 là một loạt mô hình ngôn ngữ lớn hoàn toàn mới, được thiết kế để tối ưu hóa việc xử lý các tác vụ chỉ dẫn."
   },
-  "Qwen/Qwen2.5-Coder-7B-Instruct": {
+  "Qwen/Qwen2.5-Coder-32B-Instruct": {
     "description": "Qwen2.5-Coder tập trung vào việc viết mã."
   },
   "Qwen/Qwen2.5-Math-72B-Instruct": {
@@ -192,6 +201,9 @@
   },
   "THUDM/glm-4-9b-chat": {
     "description": "GLM-4 9B là phiên bản mã nguồn mở, cung cấp trải nghiệm đối thoại tối ưu cho các ứng dụng hội thoại."
+  },
+  "Tencent/Hunyuan-A52B-Instruct": {
+    "description": "Hunyuan-Large là mô hình MoE kiến trúc Transformer mã nguồn mở lớn nhất trong ngành, với tổng số tham số là 3890 tỷ và 52 tỷ tham số kích hoạt."
   },
   "abab5.5-chat": {
     "description": "Hướng đến các tình huống sản xuất, hỗ trợ xử lý nhiệm vụ phức tạp và sinh văn bản hiệu quả, phù hợp cho các ứng dụng trong lĩnh vực chuyên môn."
@@ -448,9 +460,6 @@
   "gemini-1.5-flash-8b-exp-0924": {
     "description": "Gemini 1.5 Flash 8B 0924 là mô hình thử nghiệm mới nhất, có sự cải thiện đáng kể về hiệu suất trong các trường hợp sử dụng văn bản và đa phương thức."
   },
-  "gemini-1.5-flash-exp-0827": {
-    "description": "Gemini 1.5 Flash 0827 cung cấp khả năng xử lý đa phương thức được tối ưu hóa, phù hợp cho nhiều tình huống nhiệm vụ phức tạp."
-  },
   "gemini-1.5-flash-latest": {
     "description": "Gemini 1.5 Flash là mô hình AI đa phương thức mới nhất của Google, có khả năng xử lý nhanh, hỗ trợ đầu vào văn bản, hình ảnh và video, phù hợp cho việc mở rộng hiệu quả cho nhiều nhiệm vụ."
   },
@@ -460,14 +469,11 @@
   "gemini-1.5-pro-002": {
     "description": "Gemini 1.5 Pro 002 là mô hình sẵn sàng cho sản xuất mới nhất, cung cấp đầu ra chất lượng cao hơn, đặc biệt là trong các nhiệm vụ toán học, ngữ cảnh dài và thị giác."
   },
-  "gemini-1.5-pro-exp-0801": {
-    "description": "Gemini 1.5 Pro 0801 cung cấp khả năng xử lý đa phương thức xuất sắc, mang lại sự linh hoạt lớn hơn cho phát triển ứng dụng."
-  },
-  "gemini-1.5-pro-exp-0827": {
-    "description": "Gemini 1.5 Pro 0827 kết hợp công nghệ tối ưu hóa mới nhất, mang lại khả năng xử lý dữ liệu đa phương thức hiệu quả hơn."
-  },
   "gemini-1.5-pro-latest": {
     "description": "Gemini 1.5 Pro hỗ trợ lên đến 2 triệu tokens, là lựa chọn lý tưởng cho mô hình đa phương thức trung bình, phù hợp cho hỗ trợ đa diện cho các nhiệm vụ phức tạp."
+  },
+  "gemini-exp-1114": {
+    "description": "Gemini Exp 1114 là mô hình AI đa phương thức thử nghiệm mới nhất của Google, có khả năng xử lý nhanh, hỗ trợ đầu vào văn bản, hình ảnh và video, phù hợp với việc mở rộng hiệu quả cho nhiều nhiệm vụ."
   },
   "gemma-7b-it": {
     "description": "Gemma 7B phù hợp cho việc xử lý các nhiệm vụ quy mô vừa và nhỏ, đồng thời mang lại hiệu quả chi phí."
@@ -602,7 +608,7 @@
     "description": "GPT-4o mini là mô hình mới nhất do OpenAI phát hành sau GPT-4 Omni, hỗ trợ đầu vào hình ảnh và đầu ra văn bản. Là mô hình nhỏ gọn tiên tiến nhất của họ, nó rẻ hơn nhiều so với các mô hình tiên tiến gần đây khác và rẻ hơn hơn 60% so với GPT-3.5 Turbo. Nó giữ lại trí thông minh tiên tiến nhất trong khi có giá trị sử dụng đáng kể. GPT-4o mini đạt 82% điểm trong bài kiểm tra MMLU và hiện đứng cao hơn GPT-4 về sở thích trò chuyện."
   },
   "grok-beta": {
-    "description": "Sở hữu hiệu suất tương đương Grok 2, nhưng với hiệu quả, tốc độ và tính năng cao hơn."
+    "description": "Có hiệu suất tương đương với Grok 2, nhưng hiệu quả, tốc độ và tính năng cao hơn."
   },
   "gryphe/mythomax-l2-13b": {
     "description": "MythoMax l2 13B là mô hình ngôn ngữ kết hợp giữa sáng tạo và trí thông minh, kết hợp nhiều mô hình hàng đầu."
@@ -966,6 +972,9 @@
   "pro-128k": {
     "description": "Spark Pro 128K được cấu hình với khả năng xử lý ngữ cảnh cực lớn, có thể xử lý tới 128K thông tin ngữ cảnh, đặc biệt phù hợp cho việc phân tích toàn bộ và xử lý mối liên hệ logic lâu dài trong nội dung văn bản dài, có thể cung cấp logic mạch lạc và hỗ trợ trích dẫn đa dạng trong giao tiếp văn bản phức tạp."
   },
+  "qwen-coder-plus-latest": {
+    "description": "Mô hình mã Qwen."
+  },
   "qwen-coder-turbo-latest": {
     "description": "Mô hình mã Qwen."
   },
@@ -1017,14 +1026,11 @@
   "qwen2.5-7b-instruct": {
     "description": "Mô hình 7B quy mô mở nguồn của Qwen 2.5."
   },
-  "qwen2.5-coder-1.5b-instruct": {
+  "qwen2.5-coder-32b-instruct": {
     "description": "Phiên bản mã nguồn mở của mô hình mã Qwen."
   },
   "qwen2.5-coder-7b-instruct": {
     "description": "Phiên bản mã nguồn mở của mô hình mã Qwen."
-  },
-  "qwen2.5-math-1.5b-instruct": {
-    "description": "Mô hình Qwen-Math có khả năng giải quyết bài toán toán học mạnh mẽ."
   },
   "qwen2.5-math-72b-instruct": {
     "description": "Mô hình Qwen-Math có khả năng giải quyết bài toán toán học mạnh mẽ."
@@ -1087,7 +1093,7 @@
     "description": "Upstage SOLAR Instruct v1 (11B) phù hợp cho các nhiệm vụ chỉ dẫn tinh vi, cung cấp khả năng xử lý ngôn ngữ xuất sắc."
   },
   "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
-    "description": "Claude 3.5 Sonnet đã nâng cao tiêu chuẩn trong ngành, với hiệu suất vượt trội so với các mô hình cạnh tranh và Claude 3 Opus, thể hiện xuất sắc trong nhiều đánh giá, đồng thời có tốc độ và chi phí giống như các mô hình tầm trung của chúng tôi."
+    "description": "Claude 3.5 Sonnet nâng cao tiêu chuẩn ngành, hiệu suất vượt trội so với các mô hình cạnh tranh và Claude 3 Opus, thể hiện xuất sắc trong nhiều đánh giá, đồng thời có tốc độ và chi phí tương đương với các mô hình tầm trung của chúng tôi."
   },
   "wizardlm2": {
     "description": "WizardLM 2 là mô hình ngôn ngữ do Microsoft AI cung cấp, đặc biệt xuất sắc trong các lĩnh vực đối thoại phức tạp, đa ngôn ngữ, suy luận và trợ lý thông minh."

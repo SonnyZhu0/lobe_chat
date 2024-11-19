@@ -46,6 +46,12 @@
   "Baichuan4": {
     "description": "模型能力国内第一，在知识百科、长文本、生成创作等中文任务上超越国外主流模型。还具备行业领先的多模态能力，多项权威评测基准表现优异。"
   },
+  "Baichuan4-Air": {
+    "description": "模型能力国内第一，在知识百科、长文本、生成创作等中文任务上超越国外主流模型。还具备行业领先的多模态能力，多项权威评测基准表现优异。"
+  },
+  "Baichuan4-Turbo": {
+    "description": "模型能力国内第一，在知识百科、长文本、生成创作等中文任务上超越国外主流模型。还具备行业领先的多模态能力，多项权威评测基准表现优异。"
+  },
   "ERNIE-3.5-128K": {
     "description": "百度自研的旗舰级大规模⼤语⾔模型，覆盖海量中英文语料，具有强大的通用能力，可满足绝大部分对话问答、创作生成、插件应用场景要求；支持自动对接百度搜索插件，保障问答信息时效。"
   },
@@ -60,6 +66,9 @@
   },
   "ERNIE-4.0-8K-Preview": {
     "description": "百度自研的旗舰级超大规模⼤语⾔模型，相较ERNIE 3.5实现了模型能力全面升级，广泛适用于各领域复杂任务场景；支持自动对接百度搜索插件，保障问答信息时效。"
+  },
+  "ERNIE-4.0-Turbo-128K": {
+    "description": "百度自研的旗舰级超大规模⼤语⾔模型，综合效果表现出色，广泛适用于各领域复杂任务场景；支持自动对接百度搜索插件，保障问答信息时效。相较于ERNIE 4.0在性能表现上更优秀"
   },
   "ERNIE-4.0-Turbo-8K-Latest": {
     "description": "百度自研的旗舰级超大规模⼤语⾔模型，综合效果表现出色，广泛适用于各领域复杂任务场景；支持自动对接百度搜索插件，保障问答信息时效。相较于ERNIE 4.0在性能表现上更优秀"
@@ -160,7 +169,7 @@
   "Qwen/Qwen2.5-7B-Instruct-Turbo": {
     "description": "Qwen2.5 是全新的大型语言模型系列，旨在优化指令式任务的处理。"
   },
-  "Qwen/Qwen2.5-Coder-7B-Instruct": {
+  "Qwen/Qwen2.5-Coder-32B-Instruct": {
     "description": "Qwen2.5-Coder 专注于代码编写。"
   },
   "Qwen/Qwen2.5-Math-72B-Instruct": {
@@ -192,6 +201,9 @@
   },
   "THUDM/glm-4-9b-chat": {
     "description": "GLM-4 9B 开放源码版本，为会话应用提供优化后的对话体验。"
+  },
+  "Tencent/Hunyuan-A52B-Instruct": {
+    "description": "Hunyuan-Large 是业界最大的开源 Transformer 架构 MoE 模型，拥有 3890 亿总参数量和 520 亿激活参数量。"
   },
   "abab5.5-chat": {
     "description": "面向生产力场景，支持复杂任务处理和高效文本生成，适用于专业领域应用。"
@@ -448,9 +460,6 @@
   "gemini-1.5-flash-8b-exp-0924": {
     "description": "Gemini 1.5 Flash 8B 0924 是最新的实验性模型，在文本和多模态用例中都有显著的性能提升。"
   },
-  "gemini-1.5-flash-exp-0827": {
-    "description": "Gemini 1.5 Flash 0827 提供了优化后的多模态处理能力，适用多种复杂任务场景。"
-  },
   "gemini-1.5-flash-latest": {
     "description": "Gemini 1.5 Flash 是Google最新的多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。"
   },
@@ -460,14 +469,11 @@
   "gemini-1.5-pro-002": {
     "description": "Gemini 1.5 Pro 002 是最新的生产就绪模型，提供更高质量的输出，特别在数学、长上下文和视觉任务方面有显著提升。"
   },
-  "gemini-1.5-pro-exp-0801": {
-    "description": "Gemini 1.5 Pro 0801 提供出色的多模态处理能力，为应用开发带来更大灵活性。"
-  },
-  "gemini-1.5-pro-exp-0827": {
-    "description": "Gemini 1.5 Pro 0827 结合最新优化技术，带来更高效的多模态数据处理能力。"
-  },
   "gemini-1.5-pro-latest": {
     "description": "Gemini 1.5 Pro 支持高达200万个tokens，是中型多模态模型的理想选择，适用于复杂任务的多方面支持。"
+  },
+  "gemini-exp-1114": {
+    "description": "Gemini Exp 1114 是Google最新的实验性多模态AI模型，具备快速处理能力，支持文本、图像和视频输入，适用于多种任务的高效扩展。"
   },
   "gemma-7b-it": {
     "description": "Gemma 7B 适合中小规模任务处理，兼具成本效益。"
@@ -966,6 +972,9 @@
   "pro-128k": {
     "description": "Spark Pro 128K 配置了特大上下文处理能力，能够处理多达128K的上下文信息，特别适合需通篇分析和长期逻辑关联处理的长文内容，可在复杂文本沟通中提供流畅一致的逻辑与多样的引用支持。"
   },
+  "qwen-coder-plus-latest": {
+    "description": "通义千问代码模型。"
+  },
   "qwen-coder-turbo-latest": {
     "description": "通义千问代码模型。"
   },
@@ -1017,14 +1026,11 @@
   "qwen2.5-7b-instruct": {
     "description": "通义千问2.5对外开源的7B规模的模型。"
   },
-  "qwen2.5-coder-1.5b-instruct": {
+  "qwen2.5-coder-32b-instruct": {
     "description": "通义千问代码模型开源版。"
   },
   "qwen2.5-coder-7b-instruct": {
     "description": "通义千问代码模型开源版。"
-  },
-  "qwen2.5-math-1.5b-instruct": {
-    "description": "Qwen-Math 模型具有强大的数学解题能力。"
   },
   "qwen2.5-math-72b-instruct": {
     "description": "Qwen-Math 模型具有强大的数学解题能力。"

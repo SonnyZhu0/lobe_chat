@@ -25,7 +25,7 @@
   "@cf/qwen/qwen1.5-14b-chat-awq": {},
   "@hf/google/gemma-7b-it": {},
   "@hf/meta-llama/meta-llama-3-8b-instruct": {
-    "description": "Von Generation zu Generation zeigt Meta Llama 3 eine Spitzenleistung in einer Vielzahl von Branchenbenchmarks und bietet neue Fähigkeiten, darunter verbesserte Argumentationsfähigkeit."
+    "description": "Generation über Generation zeigt Meta Llama 3 eine Spitzenleistung in einer Vielzahl von Branchenbenchmarks und bietet neue Fähigkeiten, einschließlich verbesserter Argumentation."
   },
   "@hf/mistral/mistral-7b-instruct-v0.2": {},
   "@hf/nexusflow/starling-lm-7b-beta": {},
@@ -46,6 +46,12 @@
   "Baichuan4": {
     "description": "Das Modell hat die höchste Fähigkeit im Inland und übertrifft ausländische Mainstream-Modelle in Aufgaben wie Wissensdatenbanken, langen Texten und kreativer Generierung. Es verfügt auch über branchenführende multimodale Fähigkeiten und zeigt in mehreren autoritativen Bewertungsbenchmarks hervorragende Leistungen."
   },
+  "Baichuan4-Air": {
+    "description": "Das Modell hat die höchste Leistungsfähigkeit im Inland und übertrifft ausländische Mainstream-Modelle in Aufgaben wie Wissensdatenbanken, langen Texten und kreativen Generierungen auf Chinesisch. Es verfügt auch über branchenführende multimodale Fähigkeiten und zeigt in mehreren anerkannten Bewertungsbenchmarks hervorragende Leistungen."
+  },
+  "Baichuan4-Turbo": {
+    "description": "Das Modell hat die höchste Leistungsfähigkeit im Inland und übertrifft ausländische Mainstream-Modelle in Aufgaben wie Wissensdatenbanken, langen Texten und kreativen Generierungen auf Chinesisch. Es verfügt auch über branchenführende multimodale Fähigkeiten und zeigt in mehreren anerkannten Bewertungsbenchmarks hervorragende Leistungen."
+  },
   "ERNIE-3.5-128K": {
     "description": "Das von Baidu entwickelte Flaggschiff-Modell für großangelegte Sprachverarbeitung, das eine riesige Menge an chinesischen und englischen Texten abdeckt. Es verfügt über starke allgemeine Fähigkeiten und kann die meisten Anforderungen an Dialogfragen, kreative Generierung und Anwendungsfälle von Plugins erfüllen. Es unterstützt die automatische Anbindung an das Baidu-Such-Plugin, um die Aktualität der Antwortinformationen zu gewährleisten."
   },
@@ -60,6 +66,9 @@
   },
   "ERNIE-4.0-8K-Preview": {
     "description": "Das von Baidu entwickelte Flaggschiff-Modell für ultra-große Sprachverarbeitung, das im Vergleich zu ERNIE 3.5 eine umfassende Verbesserung der Modellfähigkeiten erreicht hat und sich breit für komplexe Aufgaben in verschiedenen Bereichen eignet; unterstützt die automatische Anbindung an das Baidu-Such-Plugin, um die Aktualität der Antwortinformationen zu gewährleisten."
+  },
+  "ERNIE-4.0-Turbo-128K": {
+    "description": "Das von Baidu entwickelte Flaggschiff-Modell für groß angelegte Sprachverarbeitung zeigt hervorragende Gesamtergebnisse und ist weit verbreitet in komplexen Aufgabenbereichen anwendbar; unterstützt die automatische Anbindung an das Baidu-Suchplugin, um die Aktualität der Frage-Antwort-Informationen zu gewährleisten. Im Vergleich zu ERNIE 4.0 zeigt es eine bessere Leistungsfähigkeit."
   },
   "ERNIE-4.0-Turbo-8K-Latest": {
     "description": "Baidus selbstentwickeltes Flaggschiff-Modell für großflächige Sprachverarbeitung, das in vielen komplexen Aufgaben hervorragende Ergebnisse zeigt und umfassend in verschiedenen Bereichen eingesetzt werden kann; unterstützt die automatische Anbindung an Baidu-Suchplugins, um die Aktualität von Antwortinformationen zu gewährleisten. Im Vergleich zu ERNIE 4.0 hat es eine bessere Leistung."
@@ -160,8 +169,8 @@
   "Qwen/Qwen2.5-7B-Instruct-Turbo": {
     "description": "Qwen2.5 ist eine neue Serie großer Sprachmodelle, die darauf abzielt, die Verarbeitung von instructiven Aufgaben zu optimieren."
   },
-  "Qwen/Qwen2.5-Coder-7B-Instruct": {
-    "description": "Qwen2.5-Coder konzentriert sich auf die Programmierung."
+  "Qwen/Qwen2.5-Coder-32B-Instruct": {
+    "description": "Qwen2.5-Coder konzentriert sich auf das Programmieren."
   },
   "Qwen/Qwen2.5-Math-72B-Instruct": {
     "description": "Qwen2.5-Math konzentriert sich auf die Problemlösung im Bereich Mathematik und bietet professionelle Lösungen für schwierige Aufgaben."
@@ -192,6 +201,9 @@
   },
   "THUDM/glm-4-9b-chat": {
     "description": "GLM-4 9B ist die Open-Source-Version, die ein optimiertes Dialogerlebnis für Konversationsanwendungen bietet."
+  },
+  "Tencent/Hunyuan-A52B-Instruct": {
+    "description": "Hunyuan-Large ist das größte Open-Source-Transformer-Architektur MoE-Modell der Branche mit insgesamt 389 Milliarden Parametern und 52 Milliarden aktiven Parametern."
   },
   "abab5.5-chat": {
     "description": "Für produktivitätsorientierte Szenarien konzipiert, unterstützt es die Verarbeitung komplexer Aufgaben und die effiziente Textgenerierung, geeignet für professionelle Anwendungen."
@@ -448,9 +460,6 @@
   "gemini-1.5-flash-8b-exp-0924": {
     "description": "Gemini 1.5 Flash 8B 0924 ist das neueste experimentelle Modell, das in Text- und multimodalen Anwendungsfällen erhebliche Leistungsverbesserungen aufweist."
   },
-  "gemini-1.5-flash-exp-0827": {
-    "description": "Gemini 1.5 Flash 0827 bietet optimierte multimodale Verarbeitungsfähigkeiten, die für verschiedene komplexe Aufgabenszenarien geeignet sind."
-  },
   "gemini-1.5-flash-latest": {
     "description": "Gemini 1.5 Flash ist Googles neuestes multimodales KI-Modell, das über schnelle Verarbeitungsfähigkeiten verfügt und Text-, Bild- und Videoeingaben unterstützt, um eine effiziente Skalierung für verschiedene Aufgaben zu ermöglichen."
   },
@@ -460,14 +469,11 @@
   "gemini-1.5-pro-002": {
     "description": "Gemini 1.5 Pro 002 ist das neueste produktionsbereite Modell, das eine höhere Ausgabequalität bietet, insbesondere bei mathematischen, langen Kontexten und visuellen Aufgaben erhebliche Verbesserungen aufweist."
   },
-  "gemini-1.5-pro-exp-0801": {
-    "description": "Gemini 1.5 Pro 0801 bietet hervorragende multimodale Verarbeitungsfähigkeiten und bringt mehr Flexibilität in die Anwendungsentwicklung."
-  },
-  "gemini-1.5-pro-exp-0827": {
-    "description": "Gemini 1.5 Pro 0827 kombiniert die neuesten Optimierungstechniken und bietet eine effizientere multimodale Datenverarbeitung."
-  },
   "gemini-1.5-pro-latest": {
     "description": "Gemini 1.5 Pro unterstützt bis zu 2 Millionen Tokens und ist die ideale Wahl für mittelgroße multimodale Modelle, die umfassende Unterstützung für komplexe Aufgaben bieten."
+  },
+  "gemini-exp-1114": {
+    "description": "Gemini Exp 1114 ist Googles neuestes experimentelles multimodales KI-Modell, das über eine schnelle Verarbeitungskapazität verfügt und Texte, Bilder und Videoeingaben unterstützt, um eine effiziente Skalierung für verschiedene Aufgaben zu ermöglichen."
   },
   "gemma-7b-it": {
     "description": "Gemma 7B eignet sich für die Verarbeitung von mittelgroßen Aufgaben und bietet ein gutes Kosten-Nutzen-Verhältnis."
@@ -966,6 +972,9 @@
   "pro-128k": {
     "description": "Spark Pro 128K verfügt über eine außergewöhnliche Kontextverarbeitungsfähigkeit und kann bis zu 128K Kontextinformationen verarbeiten, was es besonders geeignet für die Analyse langer Texte und die Verarbeitung langfristiger logischer Zusammenhänge macht. Es bietet in komplexen Textkommunikationen flüssige und konsistente Logik sowie vielfältige Unterstützung für Zitate."
   },
+  "qwen-coder-plus-latest": {
+    "description": "Tongyi Qianwen Code-Modell."
+  },
   "qwen-coder-turbo-latest": {
     "description": "Das Tongyi Qianwen Code-Modell."
   },
@@ -1017,14 +1026,11 @@
   "qwen2.5-7b-instruct": {
     "description": "Das 7B-Modell von Tongyi Qianwen 2.5 ist öffentlich zugänglich."
   },
-  "qwen2.5-coder-1.5b-instruct": {
-    "description": "Die Open-Source-Version des Tongyi Qianwen Code-Modells."
+  "qwen2.5-coder-32b-instruct": {
+    "description": "Open-Source-Version des Tongyi Qianwen Code-Modells."
   },
   "qwen2.5-coder-7b-instruct": {
     "description": "Die Open-Source-Version des Tongyi Qianwen Code-Modells."
-  },
-  "qwen2.5-math-1.5b-instruct": {
-    "description": "Das Qwen-Math-Modell verfügt über starke Fähigkeiten zur Lösung mathematischer Probleme."
   },
   "qwen2.5-math-72b-instruct": {
     "description": "Das Qwen-Math-Modell verfügt über starke Fähigkeiten zur Lösung mathematischer Probleme."
@@ -1087,7 +1093,7 @@
     "description": "Upstage SOLAR Instruct v1 (11B) eignet sich für präzise Anweisungsaufgaben und bietet hervorragende Sprachverarbeitungsfähigkeiten."
   },
   "us.anthropic.claude-3-5-sonnet-20241022-v2:0": {
-    "description": "Claude 3.5 Sonnet hat den Branchenstandard angehoben, übertrifft die Modelle der Konkurrenz und Claude 3 Opus und zeigt in umfangreichen Bewertungen hervorragende Leistungen, während es die Geschwindigkeit und Kosten unseres mittelstufigen Modells beibehält."
+    "description": "Claude 3.5 Sonnet hebt den Branchenstandard an, übertrifft die Konkurrenzmodelle und Claude 3 Opus und zeigt in umfangreichen Bewertungen hervorragende Leistungen, während es die Geschwindigkeit und Kosten unserer mittelgroßen Modelle beibehält."
   },
   "wizardlm2": {
     "description": "WizardLM 2 ist ein Sprachmodell von Microsoft AI, das in komplexen Dialogen, mehrsprachigen Anwendungen, Schlussfolgerungen und intelligenten Assistenten besonders gut abschneidet."
