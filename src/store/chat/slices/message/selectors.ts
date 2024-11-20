@@ -124,6 +124,14 @@ const currentChatIDsWithGuideMessage = (s: ChatStoreState) => {
   return currentChatsWithGuideMessage(meta)(s).map((s) => s.id);
 };
 
+const mainChatMessageIdsWithGuide = (s: ChatStoreState) => {
+  const meta = sessionMetaSelectors.currentAgentMeta(useSessionStore.getState());
+
+  return currentChatsWithGuideMessage(meta)(s)
+    .filter((m) => !m.threadId)
+    .map((s) => s.id);
+};
+
 const currentChatsWithHistoryConfig = (s: ChatStoreState): ChatMessage[] => {
   const chats = currentChats(s);
   const config = agentSelectors.currentAgentChatConfig(useAgentStore.getState());
@@ -138,6 +146,12 @@ const chatsMessageString = (s: ChatStoreState): string => {
 
 const getMessageById = (id: string) => (s: ChatStoreState) =>
   chatHelpers.getMessageById(currentChats(s), id);
+
+const countMessagesByThreadId = (id: string) => (s: ChatStoreState) => {
+  const messages = currentChats(s).filter((m) => m.threadId === id);
+
+  return messages.length;
+};
 
 const getMessageByToolCallId = (id: string) => (s: ChatStoreState) => {
   const messages = currentChats(s);
@@ -188,6 +202,7 @@ const isSendButtonDisabledByMessage = (s: ChatStoreState) =>
 
 export const chatSelectors = {
   chatsMessageString,
+  countMessagesByThreadId,
   currentChatIDsWithGuideMessage,
   currentChatKey,
   currentChatLoadingState,
@@ -211,5 +226,6 @@ export const chatSelectors = {
   isSendButtonDisabledByMessage,
   isToolCallStreaming,
   latestMessage,
+  mainChatMessageIdsWithGuide,
   showInboxWelcome,
 };
