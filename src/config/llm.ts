@@ -102,6 +102,9 @@ export const getLLMConfig = () => {
       SILICONCLOUD_API_KEY: z.string().optional(),
       SILICONCLOUD_PROXY_URL: z.string().optional(),
 
+      ENABLED_GITEE_AI: z.boolean(),
+      GITEE_AI_API_KEY: z.string().optional(),
+
       ENABLED_UPSTAGE: z.boolean(),
       UPSTAGE_API_KEY: z.string().optional(),
 
@@ -226,6 +229,9 @@ export const getLLMConfig = () => {
       ENABLED_SILICONCLOUD: !!process.env.SILICONCLOUD_API_KEY,
       SILICONCLOUD_API_KEY: process.env.SILICONCLOUD_API_KEY,
       SILICONCLOUD_PROXY_URL: process.env.SILICONCLOUD_PROXY_URL,
+
+      ENABLED_GITEE_AI: !!process.env.GITEE_AI_API_KEY,
+      GITEE_AI_API_KEY: process.env.GITEE_AI_API_KEY,
 
       ENABLED_UPSTAGE: !!process.env.UPSTAGE_API_KEY,
       UPSTAGE_API_KEY: process.env.UPSTAGE_API_KEY,
