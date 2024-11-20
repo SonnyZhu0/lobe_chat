@@ -21,6 +21,10 @@ LANGUAGE="en_US"
 # Determine the source URL to download files
 SOURCE_URL="https://raw.githubusercontent.com/lobehub/lobe-chat/main"
 
+# Arg: --host
+# Determine the server host
+HOST=""
+
 # 2. Parse script arguments
 while getopts "fl:-:" opt; do
   case $opt in
@@ -40,8 +44,12 @@ while getopts "fl:-:" opt; do
           SOURCE_URL="${!OPTIND}"
           OPTIND=$(($OPTIND + 1))
           ;;
+        host)
+          HOST="${!OPTIND}"
+          OPTIND=$(($OPTIND + 1))
+          ;;
         *)
-          echo "Usage: $0 [-f] [-l language|--lang language] [--url source]" >&2
+          echo "Usage: $0 [-f] [-l language|--lang language] [--url source] [--host serverhost]" >&2
           exit 1
           ;;
       esac
@@ -122,13 +130,43 @@ show_message() {
           ;;
       esac
       ;;
+    security_secrect_regenerate)
+      case $LANGUAGE in
+        zh_CN)
+          echo "重新生成安全密钥..."
+          ;;
+        *)
+          echo "Regenerate security secrets..."
+          ;;
+      esac
+      ;;
+    security_secrect_regenerate_failed)
+      case $LANGUAGE in
+        zh_CN)
+          echo "无法重新生成安全密钥："
+          ;;
+        *)
+          echo "Failed to regenerate security secrets: "
+          ;;
+      esac
+      ;;
+    security_secrect_regenerate_report)
+      case $LANGUAGE in
+        zh_CN)
+          echo "安全密钥生成结果如下："
+          ;;
+        *)
+          echo "Security secret generation results are as follows:"
+          ;;
+      esac
+      ;;
     tips_run_command)
       case $LANGUAGE in
         zh_CN)
-          echo "您已经完成了所有配置文件的下载。请运行以下命令启动LobeChat："
+          echo "您已经完成了所有配置。请运行以下命令启动LobeChat："
           ;;
         *)
-          echo "You have completed downloading all configuration files. Please run this command to start LobeChat:"
+          echo "You have completed all configurations. Please run this command to start LobeChat:"
           ;;
       esac
       ;;
@@ -155,10 +193,10 @@ show_message() {
     tips_warning)
       case $LANGUAGE in
         zh_CN)
-          echo "警告：不要在生产环境中使用此演示应用程序！！！"
+          echo "警告：如果你正在生产环境中使用，请在日志中检查密钥是否已经生成！！！"
           ;;
         *)
-          echo "Warning: do not use this demo application in production!!!"
+          echo "Warning: If you are using it in a production environment, please check if the keys have been generated in the logs!!!"
           ;;
       esac
       ;;
@@ -235,7 +273,76 @@ download_file "$SOURCE_URL/${FILES[3]}" "s3_data.tar.gz"
 extract_file "s3_data.tar.gz" "."
 rm s3_data.tar.gz
 
-# Display final message
+# ==========================
+# === Regenerate Secrets ===
+# ==========================
+
+echo $(show_message "security_secrect_regenerate")
+
+# Generate CASDOOR_SECRET
+CASDOOR_SECRET=$(openssl rand -base64 32)
+if [ $? -ne 0 ]; then
+  echo $(show_message "security_secrect_regenerate_failed") "CASDOOR_SECRET"
+else
+  # Search and replace the value of CASDOOR_SECRET in .env
+  sed -i "s|^AUTH_CASDOOR_SECRET=.*|AUTH_CASDOOR_SECRET=${CASDOOR_SECRET}|" .env
+  # replace `clientSecrect` in init_data.json
+  sed -i "s/"dbf205949d704de81b0b5b3603174e23fbecc354"/${CASDOOR_SECRET}/" init_data.json
+fi
+
+# Generate Casdoor User
+CASDOOR_USER="admin"
+CASDOOR_PASSWORD=$(openssl rand -base64 6)
+if [ $? -ne 0 ]; then
+  echo $(show_message "security_secrect_regenerate_failed") "CASDOOR_PASSWORD"
+else
+  # replace `password` in init_data.json
+  sed -i "s/"123"/${CASDOOR_PASSWORD}/" init_data.json
+fi
+
+# Generate Minio S3 access key
+S3_SECRET_ACCESS_KEY=$(openssl rand -base64 32)
+if [ $? -ne 0 ]; then
+  echo $(show_message "security_secrect_regenerate_failed") "S3_SECRET_ACCESS_KEY"
+else
+  # Search and replace the value of S3_SECRET_ACCESS_KEY in .env
+  sed -i "s|^S3_SECRET_ACCESS_KEY=.*|S3_SECRET_ACCESS_KEY=${S3_SECRET_ACCESS_KEY}|" .env
+fi
+
+# Generate Minio S3 user
+MINIO_ROOT_USER="admin"
+MINIO_ROOT_PASSWORD=$(openssl rand -base64 6)
+if [ $? -ne 0 ]; then
+  echo $(show_message "security_secrect_regenerate_failed") "MINIO_ROOT_PASSWORD"
+else
+  # Search and replace the value of MINIO_ROOT_PASSWORD in .env
+  sed -i "s|^MINIO_ROOT_PASSWORD=.*|MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}|" .env
+  # Modify user
+  sed -i "s/^MINIO_ROOT_USER=.*/MINIO_ROOT_USER=${MINIO_ROOT_USER}/" .env
+fi
+
+# Modify the .env file if the host is specified
+if [ -n "$HOST" ]; then
+  # Modify env
+  sed -i "s/localhost/$HOST/g" .env
+  # Modify casdoor init data
+  sed -i "s/localhost/$HOST/g" init_data.json
+fi
+
+# Display configuration reports
+
+echo $(show_message "security_secrect_regenerate_report")
+
+if [ -n "$HOST" ]; then
+  echo -e "Server Host: $HOST"
+fi
+echo -e "Casdoor: \n - Username: admin\n  - Password: ${CASDOOR_PASSWORD}\n  - Client Secret: ${CASDOOR_SECRET}"
+echo -e "Minio S3: \n - MinIO User: ${MINIO_ROOT_USER}\n  - MinIO PassWord: ${MINIO_ROOT_PASSWORD}\n  - MinIO Access Key: ${S3_SECRET_ACCESS_KEY}\n"
+
+# ===========================
+# == Display final message ==
+# ===========================
+
 printf "\n%s\n\n" "$(show_message "tips_run_command")"
 print_centered "docker compose up -d" "green"
 printf "\n%s" "$(show_message "tips_show_documentation")"
